@@ -33,6 +33,11 @@ window/stretch/aspect="expand"
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+pointing/emulate_mouse_from_touch=false
+
 [rendering]
 
 renderer/rendering_method="mobile"

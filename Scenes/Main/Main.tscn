@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Main/Main.gd" id="1_u6r7p"]
 [ext_resource type="Texture2D" uid="uid://bxauag6vwyalr" path="res://Assets/Common/TestBack.png" id="2_jvh6n"]
-[ext_resource type="Theme" uid="uid://ssfqvvnw8ryo" path="res://Assets/Common/theme1.tres" id="3_pe5af"]
+[ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="3_kr120"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_u6r7p")
@@ -12,15 +12,96 @@ offset_right = 1080.0
 offset_bottom = 1920.0
 texture = ExtResource("2_jvh6n")
 
-[node name="Button" type="Button" parent="NinePatchRect"]
-layout_mode = 0
-offset_left = 206.0
-offset_top = 835.0
-offset_right = 874.0
-offset_bottom = 1203.0
-theme = ExtResource("3_pe5af")
+[node name="ScrollContainer" type="ScrollContainer" parent="NinePatchRect"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1362.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_kr120")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 2
+theme = ExtResource("3_kr120")
+
+[node name="Button" type="Button" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme = ExtResource("3_kr120")
 text = "Press me to switch scene"
+
+[node name="Button2" type="Button" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme = ExtResource("3_kr120")
+text = "Press me to do nothing
+"
+
+[node name="Button3" type="Button" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme = ExtResource("3_kr120")
+text = "Press me to do nothing
+"
+
+[node name="Button4" type="Button" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme = ExtResource("3_kr120")
+text = "Press me to do nothing
+"
+
+[node name="Button5" type="Button" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme = ExtResource("3_kr120")
+text = "Press me to do nothing
+"
+
+[node name="Button6" type="Button" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme = ExtResource("3_kr120")
+text = "Press me to do nothing
+"
+
+[node name="Button8" type="Button" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme = ExtResource("3_kr120")
+text = "Press me to switch scene"
+
+[node name="Button7" type="Button" parent="NinePatchRect/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_filter = 1
+theme = ExtResource("3_kr120")
+text = "Press me to do nothing
+"
 
 [node name="DataBase" type="Node" parent="."]
 
-[connection signal="pressed" from="NinePatchRect/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect/ScrollContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
