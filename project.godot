@@ -17,13 +17,12 @@ config/features=PackedStringArray("4.0", "Mobile")
 [autoload]
 
 Watchman="*res://Scripts/Watchman.gd"
+LoadingScreen="*res://Scenes/Loading/Loading.tscn"
 
 [display]
 
 window/size/viewport_width=1080
 window/size/viewport_height=1920
-window/size/mode=3
-window/size/borderless=true
 window/handheld/orientation=1
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"

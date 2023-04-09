@@ -104,4 +104,6 @@ text = "Press me to do nothing
 
 [node name="DataBase" type="Node" parent="."]
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="pressed" from="NinePatchRect/ScrollContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
