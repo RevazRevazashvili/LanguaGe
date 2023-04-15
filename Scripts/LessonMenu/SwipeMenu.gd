@@ -43,10 +43,13 @@ func _process(delta: float) -> void:
 		var _swipe_length: float = (card_nodes[_index].size.x / 2) + (card_space / 2)
 		var _swipe_current_length: float = abs(_card_pos_x - scroll_horizontal)
 		var _card_scale: float = range_lerp(_swipe_current_length, _swipe_length, 0, card_scale, card_current_scale)
+		var _card_opacity: float = range_lerp(_swipe_current_length, _swipe_length, 0, 0.3, 1)
 
 		_card_scale = clamp(_card_scale, card_scale, card_current_scale)
+		_card_opacity = clamp(_card_opacity, 0.3, 1)
 
 		card_nodes[_index].scale = Vector2(_card_scale, _card_scale)
+		card_nodes[_index].modulate.a = _card_opacity
 	
 		if _swipe_current_length < _swipe_length:
 			card_current_index = _index
