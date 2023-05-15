@@ -1,0 +1,132 @@
+[gd_scene load_steps=8 format=3 uid="uid://csj3hma6cgeh7"]
+
+[ext_resource type="Script" path="res://Scenes/Lessons/SoundLesson/SoundLessons.gd" id="1_koiy3"]
+[ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="1_q65b8"]
+[ext_resource type="Texture2D" uid="uid://bf4k3tntdwpgd" path="res://Assets/Common/Sound_icons.png" id="2_1dd1n"]
+[ext_resource type="Texture2D" uid="uid://dyrpqek71670w" path="res://Assets/Common/I.png" id="3_7xnw2"]
+[ext_resource type="Texture2D" uid="uid://dmums71o27e74" path="res://Assets/Common/M.png" id="4_xd4ic"]
+[ext_resource type="Texture2D" uid="uid://b3bgenc8gyboh" path="res://Assets/Common/G.png" id="5_ubgqq"]
+[ext_resource type="Texture2D" uid="uid://btfuna4mm7xlp" path="res://Assets/Common/A.png" id="6_djixi"]
+
+[node name="SoundLessons" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_koiy3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopMargin" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+
+[node name="TopPart" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/TopPart"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -175.0
+offset_right = 180.0
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+theme = ExtResource("1_q65b8")
+icon = ExtResource("2_1dd1n")
+icon_alignment = 1
+expand_icon = true
+
+[node name="BottomPart" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/BottomPart"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -380.0
+offset_right = 400.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/BottomPart/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 50
+
+[node name="Answer1" type="Button" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme = ExtResource("1_q65b8")
+icon = ExtResource("3_7xnw2")
+icon_alignment = 1
+
+[node name="Answer2" type="Button" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme = ExtResource("1_q65b8")
+icon = ExtResource("4_xd4ic")
+icon_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/BottomPart/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 50
+
+[node name="Answer3" type="Button" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme = ExtResource("1_q65b8")
+icon = ExtResource("5_ubgqq")
+icon_alignment = 1
+
+[node name="Answer4" type="Button" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme = ExtResource("1_q65b8")
+icon = ExtResource("6_djixi")
+icon_alignment = 1
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Button" type="Button" parent="VBoxContainer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_right = 300.0
+offset_bottom = 180.0
+grow_horizontal = 2
+theme = ExtResource("1_q65b8")
+text = "Confirm"

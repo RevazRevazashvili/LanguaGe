@@ -82,8 +82,6 @@ func scroll() -> void:
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.is_pressed():
-			print("pressed")
 			scroll_tween.stop()
 		else:
-			print("else")
 			scroll()

@@ -5,7 +5,7 @@ content_margin_left = 40.0
 content_margin_top = 15.0
 content_margin_right = 40.0
 content_margin_bottom = 45.0
-bg_color = Color(1, 0.352941, 0.188235, 0.996078)
+bg_color = Color(0.686275, 0, 0, 1)
 border_width_bottom = 15
 border_color = Color(0.564706, 0.121569, 0, 0.839216)
 corner_radius_top_left = 25
@@ -15,12 +15,12 @@ corner_radius_bottom_left = 25
 expand_margin_top = 15.0
 anti_aliasing_size = 0.5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_umfp1"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1u7j"]
 content_margin_left = 40.0
 content_margin_top = 15.0
 content_margin_right = 40.0
 content_margin_bottom = 45.0
-bg_color = Color(1, 0.352941, 0.188235, 0.996078)
+bg_color = Color(0.686275, 0, 0, 1)
 border_width_bottom = 15
 border_color = Color(0.564706, 0.121569, 0, 0.839216)
 corner_radius_top_left = 25
@@ -35,7 +35,7 @@ content_margin_left = 40.0
 content_margin_top = 30.0
 content_margin_right = 40.0
 content_margin_bottom = 40.0
-bg_color = Color(1, 0.352941, 0.188235, 0.996078)
+bg_color = Color(0.686275, 0, 0, 1)
 border_color = Color(1, 0.337255, 0.184314, 0.839216)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
@@ -52,11 +52,11 @@ draw_center = false
 border_color = Color(0.305882, 0.0196078, 0.352941, 1)
 
 [resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
 Button/font_sizes/font_size = 50
 Button/styles/hover = SubResource("StyleBoxFlat_fpto2")
-Button/styles/normal = SubResource("StyleBoxFlat_umfp1")
+Button/styles/normal = SubResource("StyleBoxFlat_q1u7j")
 Button/styles/pressed = SubResource("StyleBoxFlat_xpfdr")
-Label/colors/font_color = Color(0.968627, 0.0862745, 0, 1)
 Label/font_sizes/font_size = 100
 ScrollContainer/styles/panel = SubResource("StyleBoxFlat_humce")
-VBoxContainer/constants/separation = 50
+VBoxContainer/constants/separation = 80
