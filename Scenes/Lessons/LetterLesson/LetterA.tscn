@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://oobuconaayws"]
+
+[ext_resource type="Script" path="res://Scripts/Lessons/LetterLesson/Lines.gd" id="1_vcryx"]
+
+[node name="LetterA" type="Node2D"]
+script = ExtResource("1_vcryx")
+
+[node name="Lines" type="Node2D" parent="."]
