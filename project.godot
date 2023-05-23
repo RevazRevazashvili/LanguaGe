@@ -21,6 +21,7 @@ boot_splash/image="res://Assets/Loading/loading_screen.png"
 Watchman="*res://Scripts/Watchman.gd"
 Loading="*res://Scripts/Utility/Loader/Loading.gd"
 SceneController="*res://Scripts/Utility/SceneController/SceneController.gd"
+DataManager="*res://Scripts/Utility/Data/Data_Manager.gd"
 
 [display]
 

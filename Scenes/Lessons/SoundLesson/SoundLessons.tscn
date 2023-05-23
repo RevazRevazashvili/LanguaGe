@@ -1,12 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://csj3hma6cgeh7"]
+[gd_scene load_steps=10 format=3 uid="uid://d2yecjsjhlnu0"]
 
-[ext_resource type="Script" path="res://Scenes/Lessons/SoundLesson/SoundLessons.gd" id="1_koiy3"]
 [ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="1_q65b8"]
+[ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/SoundLessons.gd" id="1_riujm"]
 [ext_resource type="Texture2D" uid="uid://bf4k3tntdwpgd" path="res://Assets/Common/Sound_icons.png" id="2_1dd1n"]
-[ext_resource type="Texture2D" uid="uid://dyrpqek71670w" path="res://Assets/Common/I.png" id="3_7xnw2"]
-[ext_resource type="Texture2D" uid="uid://dmums71o27e74" path="res://Assets/Common/M.png" id="4_xd4ic"]
-[ext_resource type="Texture2D" uid="uid://b3bgenc8gyboh" path="res://Assets/Common/G.png" id="5_ubgqq"]
-[ext_resource type="Texture2D" uid="uid://btfuna4mm7xlp" path="res://Assets/Common/A.png" id="6_djixi"]
+[ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/Audio.gd" id="4_0sjwb"]
+[ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/Audio1.gd" id="5_4madq"]
+[ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/Audio2.gd" id="7_j5nc3"]
+[ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/Audio3.gd" id="9_1wqrx"]
+[ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/Audio4.gd" id="11_3ddpn"]
+
+[sub_resource type="AudioStreamMP3" id="AudioStreamMP3_6uc21"]
 
 [node name="SoundLessons" type="Control"]
 layout_mode = 3
@@ -15,7 +18,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_koiy3")
+script = ExtResource("1_riujm")
+question = "ა"
+answer1 = "ა"
+answer2 = "ი"
+answer3 = "გ"
+answer4 = "მ"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -52,6 +60,9 @@ icon = ExtResource("2_1dd1n")
 icon_alignment = 1
 expand_icon = true
 
+[node name="Audio" type="AudioStreamPlayer2D" parent="VBoxContainer/TopPart/Button"]
+script = ExtResource("4_0sjwb")
+
 [node name="BottomPart" type="Control" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -81,16 +92,23 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 theme = ExtResource("1_q65b8")
-icon = ExtResource("3_7xnw2")
+toggle_mode = true
 icon_alignment = 1
+
+[node name="Audio1" type="AudioStreamPlayer2D" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer1"]
+stream = SubResource("AudioStreamMP3_6uc21")
+script = ExtResource("5_4madq")
 
 [node name="Answer2" type="Button" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 theme = ExtResource("1_q65b8")
-icon = ExtResource("4_xd4ic")
+toggle_mode = true
 icon_alignment = 1
+
+[node name="Audio2" type="AudioStreamPlayer2D" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer2"]
+script = ExtResource("7_j5nc3")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/BottomPart/HBoxContainer"]
 layout_mode = 2
@@ -102,16 +120,22 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 theme = ExtResource("1_q65b8")
-icon = ExtResource("5_ubgqq")
+toggle_mode = true
 icon_alignment = 1
+
+[node name="Audio3" type="AudioStreamPlayer2D" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer3"]
+script = ExtResource("9_1wqrx")
 
 [node name="Answer4" type="Button" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 theme = ExtResource("1_q65b8")
-icon = ExtResource("6_djixi")
+toggle_mode = true
 icon_alignment = 1
+
+[node name="Audio4" type="AudioStreamPlayer2D" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer4"]
+script = ExtResource("11_3ddpn")
 
 [node name="Control" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 300)
@@ -130,3 +154,13 @@ offset_bottom = 180.0
 grow_horizontal = 2
 theme = ExtResource("1_q65b8")
 text = "Confirm"
+
+[connection signal="pressed" from="VBoxContainer/TopPart/Button" to="VBoxContainer/TopPart/Button/Audio" method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer1" to="." method="_on_answer_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer1" to="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer1/Audio1" method="_on_answer_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer2" to="." method="_on_answer_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer2" to="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer2/Audio2" method="_on_answer_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer3" to="." method="_on_answer_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer3" to="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer3/Audio3" method="_on_answer_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer4" to="." method="_on_answer_4_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer4" to="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer4/Audio4" method="_on_answer_4_pressed"]

@@ -1,9 +1,10 @@
 extends Node
 # Me is singleton bitch
 
-var setup_finished = false # ცვლადი გვიჩვენებს საწყისი ჩატვირთვა მოხდა თუ არა
 
-var current_header : String # მიმდინარე სცენის სათაური (რაც თავში დაიწერება)
+var setup_finished = false	# ცვლადი გვიჩვენებს საწყისი ჩატვირთვა მოხდა თუ არა
+
+var current_header : String	# მიმდინარე სცენის სათაური (რაც თავში დაიწერება)
 
 func _ready() -> void:
 	#Loading.start_loading()

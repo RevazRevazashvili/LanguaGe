@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://boqgvdeaxj17g" path="res://Scenes/TopBar/TopBar.tscn" id="1_2805f"]
 [ext_resource type="Script" path="res://Scripts/Lessons/LessonsInterface.gd" id="1_kvnj6"]
 [ext_resource type="Texture2D" uid="uid://cwryosqv6iamk" path="res://Assets/Common/Background_color.png" id="2_rlxnj"]
-[ext_resource type="PackedScene" uid="uid://csj3hma6cgeh7" path="res://Scenes/Lessons/SoundLesson/SoundLessons.tscn" id="3_ymr3m"]
+[ext_resource type="PackedScene" uid="uid://d2yecjsjhlnu0" path="res://Scenes/Lessons/SoundLesson/SoundLessons.tscn" id="3_ymr3m"]
 
 [node name="LessonsInterface" type="Control"]
 layout_mode = 3
