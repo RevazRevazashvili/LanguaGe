@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d2yecjsjhlnu0"]
+[gd_scene load_steps=13 format=3 uid="uid://d2yecjsjhlnu0"]
 
 [ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="1_q65b8"]
 [ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/SoundLessons.gd" id="1_riujm"]
@@ -8,6 +8,60 @@
 [ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/Audio2.gd" id="7_j5nc3"]
 [ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/Audio3.gd" id="9_1wqrx"]
 [ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/Audio4.gd" id="11_3ddpn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6bqw"]
+content_margin_left = 40.0
+content_margin_top = 15.0
+content_margin_right = 40.0
+content_margin_bottom = 45.0
+bg_color = Color(0.0980392, 0.0352941, 0.2, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 15
+border_color = Color(0.317647, 0.239216, 0.447059, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_top = 15.0
+anti_aliasing_size = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7mj1"]
+content_margin_left = 40.0
+content_margin_top = 15.0
+content_margin_right = 40.0
+content_margin_bottom = 45.0
+bg_color = Color(0.0980392, 0.0352941, 0.2, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 15
+border_color = Color(0.317647, 0.239216, 0.447059, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_top = 15.0
+anti_aliasing_size = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fesay"]
+content_margin_left = 40.0
+content_margin_top = 15.0
+content_margin_right = 40.0
+content_margin_bottom = 45.0
+bg_color = Color(0.686275, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 15
+border_color = Color(0.482353, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_top = 15.0
+anti_aliasing_size = 0.5
 
 [sub_resource type="AudioStreamMP3" id="AudioStreamMP3_6uc21"]
 
@@ -92,6 +146,10 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 theme = ExtResource("1_q65b8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e6bqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q7mj1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fesay")
+theme_override_styles/focus = SubResource("StyleBoxFlat_fesay")
 toggle_mode = true
 icon_alignment = 1
 
@@ -104,6 +162,10 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 theme = ExtResource("1_q65b8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e6bqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e6bqw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fesay")
+theme_override_styles/focus = SubResource("StyleBoxFlat_fesay")
 toggle_mode = true
 icon_alignment = 1
 
@@ -120,6 +182,10 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 theme = ExtResource("1_q65b8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e6bqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e6bqw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fesay")
+theme_override_styles/focus = SubResource("StyleBoxFlat_fesay")
 toggle_mode = true
 icon_alignment = 1
 
@@ -131,18 +197,22 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 theme = ExtResource("1_q65b8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e6bqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e6bqw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fesay")
+theme_override_styles/focus = SubResource("StyleBoxFlat_fesay")
 toggle_mode = true
 icon_alignment = 1
 
 [node name="Audio4" type="AudioStreamPlayer2D" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer4"]
 script = ExtResource("11_3ddpn")
 
-[node name="Control" type="Control" parent="VBoxContainer"]
+[node name="BottomMargin" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="Button" type="Button" parent="VBoxContainer/Control"]
+[node name="Button" type="Button" parent="VBoxContainer/BottomMargin"]
 visible = false
 layout_mode = 1
 anchors_preset = 5

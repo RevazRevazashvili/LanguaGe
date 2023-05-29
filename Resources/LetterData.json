@@ -1,0 +1,42 @@
+{
+  "ა": {
+	"eng" : "a",
+	"priority" : 0,
+	"Practice" : 0
+  },
+  "ბ": {
+	"eng" : "b",
+	"priority" : 0,
+	"Practice" : 0
+  },
+  "გ": {
+	"eng" : "d",
+	"priority" : 0,
+	"Practice" : 0
+  },
+  "დ": {
+	"eng" : "d",
+	"priority" : 0,
+	"Practice" : 0
+  },
+  "ე": {
+	"eng" : "e",
+	"priority" : 0,
+	"Practice" : 0
+  },
+  "ვ": {
+	"eng" : "v",
+	"priority" : 0,
+	"Practice" : 0
+  },
+  "ზ": {
+	"eng" : "z",
+	"priority" : 0,
+	"Practice" : 0
+  },
+  "თ": {
+	"eng" : "t",
+	"priority" : 0,
+	"Practice" : 0
+  }
+}

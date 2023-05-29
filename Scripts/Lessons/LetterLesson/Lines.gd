@@ -44,6 +44,6 @@ func clear():
 
 
 func draw_letter(array : PackedVector2Array):
-	$Area2D2/CollisionPolygon2D.polygon = array
-	
+	#$Area2D2/CollisionPolygon2D.polygon = array
+	pass
 	

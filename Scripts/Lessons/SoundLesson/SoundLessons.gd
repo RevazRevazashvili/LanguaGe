@@ -36,9 +36,31 @@ var button_three : Button = $VBoxContainer/BottomPart/HBoxContainer/VBoxContaine
 var button_four : Button = $VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer4
 
 
+var _selected_answer : int	# გვიჩვენებს რომელი პასუხია არჩეული (0 ნიშნავს რომ არაა პასუხი არჩეული)
+
+
+
 func _ready() -> void:
+	initialize()
+
+
+func initialize():
+	_selected_answer = 0
+	
 	load_answers()
 	load_question()
+	self.visible = true
+
+func deinitialize():
+	self.visible = false
+
+func load_info(question : String, right_answer : int, answer1 : String, answer2 : String, answer3 : String, answer4 : String):
+	self.question = question
+	self.right_answer = right_answer
+	self.answer1 = answer1
+	self.answer2 = answer2
+	self.answer3 = answer3
+	self.answer4 = answer4
 
 
 func load_answers():
@@ -74,31 +96,49 @@ func load_answers():
 		var audio = button_four.get_child(0) as AudioStreamPlayer2D
 		audio.stream = load(DataManager.get_letter_sound_path(answer4))
 
+
 func load_question():
 	if(!question.is_empty()):
 		# ხმის ჩატვირთვა
 		question_audio.stream = load(DataManager.get_letter_sound_path(question))
 
 
+
+
+func check_if_answered():
+	return _selected_answer != 0
+
+func is_selected_correct():
+	return right_answer == _selected_answer
+
+
 func _on_answer_1_pressed() -> void:
+	_selected_answer = 1
+	emit_signal("selected")
 	button_one.button_pressed = true
 	button_two.button_pressed = false
 	button_three.button_pressed = false
 	button_four.button_pressed = false
 
 func _on_answer_2_pressed() -> void:
+	_selected_answer = 2
+	emit_signal("selected")
 	button_one.button_pressed = false
 	button_two.button_pressed = true
 	button_three.button_pressed = false
 	button_four.button_pressed = false
 
 func _on_answer_3_pressed() -> void:
+	_selected_answer = 3
+	emit_signal("selected")
 	button_one.button_pressed = false
 	button_two.button_pressed = false
 	button_three.button_pressed = true
 	button_four.button_pressed = false
 
 func _on_answer_4_pressed() -> void:
+	_selected_answer = 4
+	emit_signal("selected")
 	button_one.button_pressed = false
 	button_two.button_pressed = false
 	button_three.button_pressed = false
