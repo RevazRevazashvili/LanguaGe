@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cayjbcb7stwhd"]
+[gd_scene load_steps=6 format=3 uid="uid://cayjbcb7stwhd"]
 
 [ext_resource type="Texture2D" uid="uid://cwryosqv6iamk" path="res://Assets/Common/Background_color.png" id="1_f3fk3"]
 [ext_resource type="PackedScene" uid="uid://da28g64xeig3o" path="res://Scenes/LessonMenu/SwipeMenu.tscn" id="1_gr7jh"]
+[ext_resource type="Script" path="res://Scripts/LessonMenu/LessonMenu.gd" id="1_sk3tf"]
 [ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="2_swbq0"]
 [ext_resource type="PackedScene" uid="uid://boqgvdeaxj17g" path="res://Scenes/TopBar/TopBar.tscn" id="4_bdcma"]
 
 [node name="LessonMenu" type="Node2D"]
+script = ExtResource("1_sk3tf")
 
 [node name="Background" type="NinePatchRect" parent="."]
 offset_right = 1080.0
