@@ -1,6 +1,5 @@
 [gd_resource type="Resource" script_class="Data_saver" load_steps=36 format=3 uid="uid://b12a44hca1ybv"]
 
-[ext_resource type="Script" path="res://Scripts/Utility/Data/Letter_Data.gd" id="1_16oiw"]
 [ext_resource type="Script" path="res://Scripts/Utility/Data/Data_Saver.gd" id="1_f45ei"]
 
 [sub_resource type="Resource" id="Resource_4scj4"]
@@ -270,3 +269,4 @@ practice = 0
 [resource]
 script = ExtResource("1_f45ei")
 letter_data = Array[ExtResource("1_16oiw")]([SubResource("Resource_4scj4"), SubResource("Resource_jtsfh"), SubResource("Resource_oxra4"), SubResource("Resource_06mg7"), SubResource("Resource_ue7ij"), SubResource("Resource_0j1s6"), SubResource("Resource_cx35r"), SubResource("Resource_6x1d1"), SubResource("Resource_t7rsi"), SubResource("Resource_l2gk2"), SubResource("Resource_jekg7"), SubResource("Resource_o4x26"), SubResource("Resource_e7klu"), SubResource("Resource_drwxb"), SubResource("Resource_5wjvc"), SubResource("Resource_545ar"), SubResource("Resource_j6j36"), SubResource("Resource_kgwtr"), SubResource("Resource_1325q"), SubResource("Resource_36a7y"), SubResource("Resource_w0eig"), SubResource("Resource_e2inm"), SubResource("Resource_vdxm7"), SubResource("Resource_dxqsf"), SubResource("Resource_k1foq"), SubResource("Resource_mlh3v"), SubResource("Resource_au1uv"), SubResource("Resource_vsqf3"), SubResource("Resource_gdfbm"), SubResource("Resource_0sbpo"), SubResource("Resource_yq7ua"), SubResource("Resource_xuy0n"), SubResource("Resource_h2fwu")])
+

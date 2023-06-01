@@ -4,7 +4,7 @@ class_name Data_saver
 const SAVE_GAME_PATH := DataManager.RESOURCE_FOLDER_PATH + "/save_data.tres"
 
 @export
-var letter_data: Array[Letter]
+var letters: Array[Letter]
 
 func save_data():
 	ResourceSaver.save(self, SAVE_GAME_PATH)
@@ -16,7 +16,7 @@ static func load_data():
 
 
 func _find_letter(letter : String):
-	for letter_container in letter_data:
+	for letter_container in letters:
 		if letter_container.letter == letter:
 			return letter_container;
 	return null;
