@@ -17,3 +17,6 @@ var priority : int
 var practice : int
 
 
+
+func eval():
+	return practice + priority
