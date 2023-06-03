@@ -1,14 +1,14 @@
 extends Node
 # Me is singleton bitch
 
+
+enum TEST_TYPE{quiz, sound, text}	# გვიჩვენებს გაკვეთილში ტესტის ტიპს
+
 enum LESSON_TYPE {lett, s_wrd, mixd}	# გვიჩვენებს ჩასატვირთი გაკვეთილის ტიპს
+
 var lessons_enums : Array[LESSON_TYPE]	# ჩასატვირთი გაკვეთილების სია
 
-var current_lesson_type : LESSON_TYPE	# მიდინარე ჩატვირთული გაკვეთილის ტიპი
-
-var letter_data : Data_saver			# შენახული ასოები
-
-var chosen_letters : Array[Dictionary]	# შერჩეული ასოები პლიუს ინფორმაცია მათ გავლილ გაკვეთილებზე
+var lesson_controller : Lessons_util	# მიდინარე ჩატვირთული გაკვეთილის კონტროლერი (მაში შედის ინფორმაცია რა დათა ჩაიტვირტება გაკვეთილში და როგორი)
 
 
 
@@ -22,7 +22,9 @@ func _ready() -> void:
 	#Loading.start_loading()
 	Loading.connect("loading_cycle", initial_setup)
 	
-	var aqlemi = Data_saver.load_data()
+	#Data_saver.new().save_data()
+	
+	#var aqlemi = Data_saver.load_data()
 
 # საწყისი ჩატვირთვის დორს განხორციელებული ფუნქცია
 func initial_setup():
@@ -56,7 +58,7 @@ func go_to_unit_1():
 	
 	
 	
-	var timer = get_tree().create_timer(5)
+	var timer = get_tree().create_timer(1)
 	
 	await timer.timeout
 	
@@ -68,9 +70,6 @@ func get_current_header():
 
 func is_prevous_enabled():
 	return SceneController.has_previous()
-
-func load_letter_data():
-	letter_data = Data_saver.load_data()
 
 
 
@@ -89,41 +88,15 @@ func _load_letters_lessons():
 	# გაუშვათ ლოადინგი
 	Loading.start_loading()
 	
-	# აქ უნდა ჩავტვირთოთ ასოების ინფორმაცია და შევინახოთ იგი ლესსონს მენიუში?
+	lesson_controller = Letters_lesson_util.new()
 	
-	current_lesson_type = LESSON_TYPE.lett
-	
-	# ჩავტვირთავთ ასოების დათას
-	load_letter_data()
-	
-	# ავარჩევთ 3 შესაბამის ასოს
-	chosen_letters = _choose_letters()
+	lesson_controller.initialize()
 	
 	Loading.stop_loading_and_transition("res://Scenes/Lessons/LessonsInterface.tscn")
 
-func _choose_letters():
-	var one = letter_data.letters[0]
-	var two = letter_data.letters[1]
-	var three = letter_data.letters[2]
-	
-	for letter in letter_data.letters:
-		if(one.eval() > letter.eval()):
-			if two.eval() > one.eval():
-				if three.eval() > two.eval():
-					three = two
-				two = one
-			one = letter
-		elif (two.eval() > letter.eval()):
-			if(three.eval() > two.eval()):
-				three = two;
-			two = letter
-		elif (three.eval() > letter.eval()):
-			three = letter
-	
-	return {one : [false, false, false], two : [false, false, false], three : [false, false, false]}
-	
 
 func _load_simple_words_lessons():
+	print("simple words!!")
 	pass
 
 func _load_practice_lessons():

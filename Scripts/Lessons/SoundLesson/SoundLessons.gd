@@ -53,6 +53,10 @@ func initialize():
 
 func deinitialize():
 	self.visible = false
+	button_one.button_pressed = false
+	button_two.button_pressed = false
+	button_three.button_pressed = false
+	button_four.button_pressed = false
 
 func load_info(question : String, right_answer : int, answer1 : String, answer2 : String, answer3 : String, answer4 : String):
 	self.question = question

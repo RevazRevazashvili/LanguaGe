@@ -1,8 +1,8 @@
 extends Resource
-class_name Letter
+class_name Word
 
 @export
-var letter : String
+var word : String
 
 @export
 var eng : String
@@ -17,10 +17,15 @@ var priority : int
 var practice : int
 
 
-
 func eval():
 	return practice + priority
 
 func increment_practice():
 	practice += 1
+
+func contains_letter(letter : String):
+	return word.contains(letter)
+
+func contains(letter : Letter):
+	return contains_letter(letter.letter)
 
