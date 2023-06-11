@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtapr541vsymv"]
+[gd_scene load_steps=7 format=3 uid="uid://bb35uukgpal5i"]
 
 [ext_resource type="PackedScene" uid="uid://boqgvdeaxj17g" path="res://Scenes/TopBar/TopBar.tscn" id="1_2805f"]
 [ext_resource type="Script" path="res://Scripts/Lessons/LessonsInterface.gd" id="1_kvnj6"]
 [ext_resource type="Texture2D" uid="uid://cwryosqv6iamk" path="res://Assets/Common/Background_color.png" id="2_rlxnj"]
+[ext_resource type="PackedScene" uid="uid://dlm4nk3t7wv47" path="res://Scenes/Lessons/QuizLesson/QuizLesson.tscn" id="3_r4cq8"]
 [ext_resource type="PackedScene" uid="uid://d2yecjsjhlnu0" path="res://Scenes/Lessons/SoundLesson/SoundLessons.tscn" id="3_ymr3m"]
 [ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="5_i0v2a"]
 
@@ -31,6 +32,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="QuizLesson" parent="LessonsSpace" instance=ExtResource("3_r4cq8")]
+layout_mode = 1
 
 [node name="SoundLessons" parent="LessonsSpace" instance=ExtResource("3_ymr3m")]
 layout_mode = 1

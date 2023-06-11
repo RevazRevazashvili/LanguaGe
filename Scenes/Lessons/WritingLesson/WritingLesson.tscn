@@ -1,0 +1,132 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjib8ywk1oyms"]
+
+[ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="1_sjohi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eaxd3"]
+content_margin_left = 40.0
+content_margin_top = 0.0
+content_margin_right = 40.0
+content_margin_bottom = 0.0
+bg_color = Color(0.0980392, 0.0352941, 0.2, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.317647, 0.239216, 0.447059, 1)
+corner_radius_top_left = 35
+corner_radius_top_right = 35
+corner_radius_bottom_right = 35
+corner_radius_bottom_left = 35
+
+[node name="WritingLesson" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_sjohi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopMargin" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+
+[node name="TopPart" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/TopPart"]
+custom_minimum_size = Vector2(980, 14)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0462963
+anchor_top = 0.249158
+anchor_right = 0.953704
+anchor_bottom = 0.281145
+offset_bottom = 1.52588e-05
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.317647, 0.239216, 0.447059, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/TopPart"]
+custom_minimum_size = Vector2(980, 14)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0462963
+anchor_top = 0.479798
+anchor_right = 0.953704
+anchor_bottom = 0.511784
+offset_bottom = 3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.317647, 0.239216, 0.447059, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/TopPart"]
+custom_minimum_size = Vector2(980, 14)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0462963
+anchor_top = 0.710438
+anchor_right = 0.953704
+anchor_bottom = 0.742424
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.317647, 0.239216, 0.447059, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/TopPart"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_filter = 2
+theme = ExtResource("1_sjohi")
+text = "something something bla bla bla"
+placeholder_text = "this is a placeholder"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1
+
+[node name="BottomPart" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/BottomPart"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer/BottomPart/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 78
+theme_override_styles/normal = SubResource("StyleBoxFlat_eaxd3")
+placeholder_text = "your answer"
+
+[node name="BottomMargin" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 8

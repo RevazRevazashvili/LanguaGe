@@ -1,0 +1,197 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlm4nk3t7wv47"]
+
+[ext_resource type="Script" path="res://Scripts/Lessons/QuizLesson/QuizLesson.gd" id="1_o7dii"]
+[ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="2_qswis"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0qd1"]
+content_margin_left = 40.0
+content_margin_top = 15.0
+content_margin_right = 40.0
+content_margin_bottom = 45.0
+bg_color = Color(0.0980392, 0.0352941, 0.2, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 15
+border_color = Color(0.317647, 0.239216, 0.447059, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_top = 15.0
+anti_aliasing_size = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djxoi"]
+content_margin_left = 40.0
+content_margin_top = 15.0
+content_margin_right = 40.0
+content_margin_bottom = 45.0
+bg_color = Color(0.0980392, 0.0352941, 0.2, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 15
+border_color = Color(0.317647, 0.239216, 0.447059, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_top = 15.0
+anti_aliasing_size = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eh3ty"]
+content_margin_left = 40.0
+content_margin_top = 15.0
+content_margin_right = 40.0
+content_margin_bottom = 45.0
+bg_color = Color(0.686275, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 15
+border_color = Color(0.482353, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_top = 15.0
+anti_aliasing_size = 0.5
+
+[node name="QuizLesson" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o7dii")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopMargin" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+
+[node name="TopPart" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/TopPart"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.564972
+anchor_right = 1.0
+anchor_bottom = 0.584746
+offset_left = 140.0
+offset_right = -140.0
+offset_bottom = -3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.317647, 0.239216, 0.447059, 1)
+
+[node name="Label" type="Label" parent="VBoxContainer/TopPart"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -374.0
+offset_top = -96.0
+offset_right = 374.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_qswis")
+theme_override_font_sizes/font_size = 130
+text = "Rame teqsti"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BottomPart" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/BottomPart"]
+layout_mode = 2
+anchor_left = 0.12963
+anchor_top = -0.0367232
+anchor_right = 0.87037
+anchor_bottom = 0.951977
+size_flags_horizontal = 3
+theme_override_constants/separation = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="Answer1" type="Button" parent="VBoxContainer/BottomPart/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme = ExtResource("2_qswis")
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0qd1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_djxoi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eh3ty")
+toggle_mode = true
+icon_alignment = 1
+
+[node name="Answer2" type="Button" parent="VBoxContainer/BottomPart/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme = ExtResource("2_qswis")
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0qd1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_djxoi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eh3ty")
+toggle_mode = true
+icon_alignment = 1
+
+[node name="Answer3" type="Button" parent="VBoxContainer/BottomPart/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme = ExtResource("2_qswis")
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0qd1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_djxoi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eh3ty")
+toggle_mode = true
+icon_alignment = 1
+
+[node name="Answer4" type="Button" parent="VBoxContainer/BottomPart/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme = ExtResource("2_qswis")
+theme_override_styles/normal = SubResource("StyleBoxFlat_c0qd1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_djxoi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eh3ty")
+toggle_mode = true
+icon_alignment = 1
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="Button" type="Button" parent="VBoxContainer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_right = 300.0
+offset_bottom = 180.0
+grow_horizontal = 2
+theme = ExtResource("2_qswis")
+text = "Confirm"
+
+[connection signal="pressed" from="VBoxContainer/BottomPart/VBoxContainer/Answer1" to="." method="_on_answer_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomPart/VBoxContainer/Answer2" to="." method="_on_answer_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomPart/VBoxContainer/Answer3" to="." method="_on_answer_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/BottomPart/VBoxContainer/Answer4" to="." method="_on_answer_4_pressed"]

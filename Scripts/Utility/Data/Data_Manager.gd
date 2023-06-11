@@ -13,7 +13,3 @@ func get_letter_icon_path(letter : String):
 func get_letter_sound_path(letter : String):
 	return (RESOURCE_FOLDER_PATH + "/Letter_sounds/" + letter + ".mp3")
 
-# აბრუნებს ჯსონ ფაილს სადაც მონაცემებია ასოებზე
-func get_letter_data_json_path():
-	return (RESOURCE_FOLDER_PATH + "/LetterData.json")
-

@@ -1,8 +1,5 @@
 extends Control
 
-@export
-var lessons: Array[String]			# მიმდინარე გაკვეთილში შემავალი ტესტები
-
 
 @export # this wont be needed remove it
 var last_page: Node					# ტესტის დამთავრების გვერდი რომელიც ყველა ტესტის გავლის შემდეგ გამოჩნდება
@@ -10,11 +7,11 @@ var last_page: Node					# ტესტის დამთავრების �
 
 # ტესტების ტიპები რომლებიც ჩაიტვირთება მოთხოვნებისამებრ
 @onready
-var sound_lesson = $LessonsSpace/SoundLessons
+var sound_lesson : SoundLesson = $LessonsSpace/SoundLessons
 @onready
 var text_lesson = $LessonsSpace/TextLessons
 @onready
-var quizz_lesson = $LessonsSpace/QuizzLessons
+var quiz_lesson : QuizLesson = $LessonsSpace/QuizLesson
 @onready
 var write_lesson = $LessonsSpace/WriteLessons
 
@@ -31,6 +28,17 @@ var current_lesson_index = 0		# მიმდინარე ტესტის �
 var current_score = 0				# მიმდინარე ქულა (სწორად გაცემული კითხვების რაოდენობა)
 
 
+func _on_continue_pressed() -> void:
+	if current_lesson.is_selected_correct():
+		current_score += 1
+	
+	continue_button.disabled = true;
+	
+	if(_has_next_lesson()):
+		_load_next_lesson()
+	else:
+		_load_last_page()
+
 
 func _ready() -> void:
 	continue_button.disabled = true
@@ -42,95 +50,61 @@ func _ready() -> void:
 	#write_lesson.visible = false
 	
 	# this is a test
-	_load_sound_lesson("ა", 1, "აქლემი", "ბ", "მ", "ი")
-	
+	_load_next_lesson()
 	# load lessons from somewhere
 	
 	# define current lesson
 	
 	current_lesson.connect("selected", _answer_selected)
 	
+	
+
 
 func _answer_selected():
 	continue_button.disabled = false;
 
-
-func _handle_answer(answer: bool):
-	if answer:
-		current_score += 1
-	
-	if _has_next_lesson():
-		_load_next_lesson()
-	else:
-		_load_last_page()
-
-
 func _has_next_lesson():
-	return lessons.size() < current_lesson_index
+	return Watchman.lesson_controller.has_next_lesson()
 
 func _load_next_lesson():
-	if(lessons.size() < current_lesson_index):
-		_load_lesson_on(current_lesson_index + 1)
+	var next_lesson_data = Watchman.lesson_controller.get_next_lesson()
+	
+	match next_lesson_data[0]:
+		Watchman.TEST_TYPE.quiz:
+			_load_quiz_lesson(next_lesson_data[1], next_lesson_data[2], next_lesson_data[3][0], next_lesson_data[3][1], next_lesson_data[3][2], next_lesson_data[3][3])
+		Watchman.TEST_TYPE.sound:
+			_load_sound_lesson(next_lesson_data[1], next_lesson_data[2], next_lesson_data[3][0], next_lesson_data[3][1], next_lesson_data[3][2], next_lesson_data[3][3])
+		Watchman.TEST_TYPE.text:
+			_load_sound_lesson(next_lesson_data[1], next_lesson_data[2], next_lesson_data[3][0], next_lesson_data[3][1], next_lesson_data[3][2], next_lesson_data[3][3])
+
 
 # this functions need to be rewritten
 func _load_last_page():
 	print("your result is " + str(current_score))
-	pass
-
-func _load_lesson_on(index : int):
-	#for child in lesson_space.get_children():
-	#	child.queue_free()
 	
-	#lesson_space.add_child(lessons[index])
-	#current_lesson_index = index
-	pass
+	########Uncomment in Production########
+	#Watchman.lesson_controller.save_data()
 
 
 
 
-func _on_continue_pressed() -> void:
-	if current_lesson.is_selected_correct():
-		current_score += 1
-	
-	if(_has_next_lesson()):
-		_load_next_lesson()
-	else:
-		_load_last_page()
-
-
-
-
-func _load_sound_lesson(question : String, right_answer : int, answer1 : String, answer2 : String, answer3 : String, answer4 : String):
+func _load_sound_lesson(question, right_answer : int, answer1, answer2, answer3, answer4):
 	sound_lesson.load_info(question, right_answer, answer1, answer2, answer3, answer4)
 	
-	if(current_lesson != null):
-		current_lesson.deinitialize()
-	
-	current_lesson = sound_lesson
-	
-	current_lesson.initialize()
+	change_current_lesson_to(sound_lesson)
 
 # გადაეცემა კითხვა და სწორი პასუხი
 func _load_text_lesson(question : String, right_answer : String):
 	# write some function which will be loaded here
 	
-	if(current_lesson != null):
-		current_lesson.deinitialize()
-	
-	current_lesson = text_lesson
-	
-	current_lesson.initialize()
+	change_current_lesson_to(text_lesson)
 
 # გადაეცემა კითხვა, სწორი პასუხის ნომერი, სავარაუდო პასუხები
-func _load_quizz_lesson(question : String, right_answer : int, answer1 : String, answer2 : String, answer3 : String, answer4 : String):
+func _load_quiz_lesson(question : String, right_answer : int, answer1 : String, answer2 : String, answer3 : String, answer4 : String):
 	# load info
+	quiz_lesson.load_info(question, right_answer, answer1, answer2, answer3, answer4)
 	
-	if(current_lesson != null):
-		current_lesson.deinitialize()
-	
-	current_lesson = quizz_lesson
-	
-	current_lesson.initialize()
+	change_current_lesson_to(quiz_lesson)
 
 # გადაეცემა კითხვა და სწორი პასუხის ინდექსი? მაგალითად თუ "ა" გადაეცა ჩატვირთავს ა.tsnc - ის?
 func _load_write_lesson(question : String, right_answer : String):
@@ -140,6 +114,17 @@ func _load_write_lesson(question : String, right_answer : String):
 		current_lesson.deinitialize()
 	
 	current_lesson = write_lesson
+	
+	current_lesson.initialize()
+
+
+func change_current_lesson_to(lesson : Lesson):
+	if(current_lesson != null):
+		current_lesson.disconnect("selected", _answer_selected)
+		current_lesson.deinitialize()
+	
+	current_lesson = lesson
+	current_lesson.connect("selected", _answer_selected)
 	
 	current_lesson.initialize()
 

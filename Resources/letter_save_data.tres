@@ -1,0 +1,264 @@
+[gd_resource type="Resource" script_class="Data_saver" load_steps=35 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Utility/Data/Letter_Saver.gd" id="1_ev2ol"]
+[ext_resource type="Script" path="res://Scripts/Utility/Data/Letter_Data.gd" id="1_llqoq"]
+
+[sub_resource type="Resource" id="Resource_1y0fr"]
+script = ExtResource("1_llqoq")
+letter = "ა"
+eng = "a"
+rus = ""
+priority = 0
+practice = 0
+
+[sub_resource type="Resource" id="Resource_4r8cf"]
+script = ExtResource("1_llqoq")
+letter = "ი"
+eng = "i"
+rus = ""
+priority = 0
+practice = 0
+
+[sub_resource type="Resource" id="Resource_qeeex"]
+script = ExtResource("1_llqoq")
+letter = "ე"
+eng = "e"
+rus = ""
+priority = 0
+practice = 0
+
+[sub_resource type="Resource" id="Resource_csyav"]
+script = ExtResource("1_llqoq")
+letter = "გ"
+eng = "g"
+rus = ""
+priority = 4
+practice = 0
+
+[sub_resource type="Resource" id="Resource_ol8ya"]
+script = ExtResource("1_llqoq")
+letter = "დ"
+eng = "d"
+rus = ""
+priority = 4
+practice = 0
+
+[sub_resource type="Resource" id="Resource_beomv"]
+script = ExtResource("1_llqoq")
+letter = "ვ"
+eng = "v"
+rus = ""
+priority = 5
+practice = 0
+
+[sub_resource type="Resource" id="Resource_3xl6k"]
+script = ExtResource("1_llqoq")
+letter = "ზ"
+eng = "z"
+rus = ""
+priority = 5
+practice = 0
+
+[sub_resource type="Resource" id="Resource_awply"]
+script = ExtResource("1_llqoq")
+letter = "თ"
+eng = "t"
+rus = ""
+priority = 3
+practice = 0
+
+[sub_resource type="Resource" id="Resource_opfe2"]
+script = ExtResource("1_llqoq")
+letter = "კ"
+eng = "k'"
+rus = ""
+priority = 4
+practice = 0
+
+[sub_resource type="Resource" id="Resource_lxv4r"]
+script = ExtResource("1_llqoq")
+letter = "ლ"
+eng = "l"
+rus = ""
+priority = 1
+practice = 0
+
+[sub_resource type="Resource" id="Resource_3flxf"]
+script = ExtResource("1_llqoq")
+letter = "მ"
+eng = "m"
+rus = ""
+priority = 2
+practice = 0
+
+[sub_resource type="Resource" id="Resource_cm7xw"]
+script = ExtResource("1_llqoq")
+letter = "ბ"
+eng = "b"
+rus = ""
+priority = 3
+practice = 0
+
+[sub_resource type="Resource" id="Resource_lotnn"]
+script = ExtResource("1_llqoq")
+letter = "ნ"
+eng = "n"
+rus = ""
+priority = 2
+practice = 0
+
+[sub_resource type="Resource" id="Resource_fedn7"]
+script = ExtResource("1_llqoq")
+letter = "ო"
+eng = "o"
+rus = ""
+priority = 1
+practice = 0
+
+[sub_resource type="Resource" id="Resource_7xfby"]
+script = ExtResource("1_llqoq")
+letter = "პ"
+eng = "p'"
+rus = ""
+priority = 10
+practice = 0
+
+[sub_resource type="Resource" id="Resource_chj4e"]
+script = ExtResource("1_llqoq")
+letter = "ჟ"
+eng = "zh"
+rus = ""
+priority = 7
+practice = 0
+
+[sub_resource type="Resource" id="Resource_isjca"]
+script = ExtResource("1_llqoq")
+letter = "რ"
+eng = "r"
+rus = ""
+priority = 1
+practice = 0
+
+[sub_resource type="Resource" id="Resource_euvoy"]
+script = ExtResource("1_llqoq")
+letter = "ს"
+eng = "s"
+rus = ""
+priority = 2
+practice = 0
+
+[sub_resource type="Resource" id="Resource_wfrb6"]
+script = ExtResource("1_llqoq")
+letter = "ტ"
+eng = "t'"
+rus = ""
+priority = 10
+practice = 0
+
+[sub_resource type="Resource" id="Resource_wyhti"]
+script = ExtResource("1_llqoq")
+letter = "უ"
+eng = "u"
+rus = ""
+priority = 3
+practice = 0
+
+[sub_resource type="Resource" id="Resource_scbuc"]
+script = ExtResource("1_llqoq")
+letter = "ფ"
+eng = "p"
+rus = ""
+priority = 5
+practice = 0
+
+[sub_resource type="Resource" id="Resource_l2ntv"]
+script = ExtResource("1_llqoq")
+letter = "ქ"
+eng = "k"
+rus = ""
+priority = 6
+practice = 0
+
+[sub_resource type="Resource" id="Resource_yglcg"]
+script = ExtResource("1_llqoq")
+letter = "ღ"
+eng = "gh"
+rus = ""
+priority = 8
+practice = 0
+
+[sub_resource type="Resource" id="Resource_s55ku"]
+script = ExtResource("1_llqoq")
+letter = "ყ"
+eng = "q'"
+rus = ""
+priority = 9
+practice = 0
+
+[sub_resource type="Resource" id="Resource_ratpy"]
+script = ExtResource("1_llqoq")
+letter = "შ"
+eng = "sh"
+rus = ""
+priority = 8
+practice = 0
+
+[sub_resource type="Resource" id="Resource_o7asr"]
+script = ExtResource("1_llqoq")
+letter = "ჩ"
+eng = "ch"
+rus = ""
+priority = 7
+practice = 0
+
+[sub_resource type="Resource" id="Resource_blv2l"]
+script = ExtResource("1_llqoq")
+letter = "ც"
+eng = "ts"
+rus = ""
+priority = 6
+practice = 0
+
+[sub_resource type="Resource" id="Resource_8c7e0"]
+script = ExtResource("1_llqoq")
+letter = "ძ"
+eng = "dz"
+rus = ""
+priority = 9
+practice = 0
+
+[sub_resource type="Resource" id="Resource_w8hs1"]
+script = ExtResource("1_llqoq")
+letter = "წ"
+eng = "ts'"
+rus = ""
+priority = 9
+practice = 0
+
+[sub_resource type="Resource" id="Resource_l8vlp"]
+script = ExtResource("1_llqoq")
+letter = "ჭ"
+eng = "ch'"
+rus = ""
+priority = 10
+practice = 0
+
+[sub_resource type="Resource" id="Resource_dxt32"]
+script = ExtResource("1_llqoq")
+letter = "ხ"
+eng = "kh"
+rus = ""
+priority = 6
+practice = 0
+
+[sub_resource type="Resource" id="Resource_l067v"]
+script = ExtResource("1_llqoq")
+letter = "ჯ"
+eng = "j"
+rus = ""
+priority = 8
+practice = 0
+
+[resource]
+script = ExtResource("1_ev2ol")
+letters = Array[ExtResource("1_llqoq")]([SubResource("Resource_1y0fr"), SubResource("Resource_4r8cf"), SubResource("Resource_qeeex"), SubResource("Resource_csyav"), SubResource("Resource_ol8ya"), SubResource("Resource_beomv"), SubResource("Resource_3xl6k"), SubResource("Resource_awply"), SubResource("Resource_opfe2"), SubResource("Resource_lxv4r"), SubResource("Resource_3flxf"), SubResource("Resource_cm7xw"), SubResource("Resource_lotnn"), SubResource("Resource_fedn7"), SubResource("Resource_7xfby"), SubResource("Resource_chj4e"), SubResource("Resource_isjca"), SubResource("Resource_euvoy"), SubResource("Resource_wfrb6"), SubResource("Resource_wyhti"), SubResource("Resource_scbuc"), SubResource("Resource_l2ntv"), SubResource("Resource_yglcg"), SubResource("Resource_s55ku"), SubResource("Resource_ratpy"), SubResource("Resource_o7asr"), SubResource("Resource_blv2l"), SubResource("Resource_8c7e0"), SubResource("Resource_w8hs1"), SubResource("Resource_l8vlp"), SubResource("Resource_dxt32"), SubResource("Resource_l067v")])
