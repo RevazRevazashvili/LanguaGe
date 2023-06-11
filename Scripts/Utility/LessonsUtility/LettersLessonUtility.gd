@@ -30,11 +30,11 @@ func get_next_lesson():
 	# თუ დაწერა მაშინ ეს ასო ამოიშლება
 	if val == 0:
 		chosen_letters[lett] += 1
-		return _get_quiz_for(lett)
+		return _get_sound_for(lett) 
 	
 	if val == 1:
 		chosen_letters[lett] += 1
-		return _get_sound_for(lett) 
+		return _get_quiz_for(lett)
 	
 	if val == 2:
 		chosen_letters.erase(lett)
@@ -89,13 +89,18 @@ func _get_quiz_for(letter : Letter):
 	var answers : Array
 	
 	var j = 0
+	Watchman.data_dict = {}
 	for i in range(0, 4):
+		var lett : Letter
 		if(i == correct_index):
-			answers.append(question.get_foreign())
+			lett = question
 		else:
-			answers.append(rand_letters[j].get_foreign())
+			lett = rand_letters[j]
 			j += 1
-	
+		
+		Watchman.data_dict[lett.get_foreign()] = lett.letter
+		
+		answers.append(lett.get_foreign())
 	
 	
 	return [type, question.letter, correct_index + 1, answers]
@@ -115,12 +120,18 @@ func _get_sound_for(letter : Letter):
 	var answers : Array
 	
 	var j = 0
+	Watchman.data_dict = {}
 	for i in range(0, 4):
+		var lett : Letter
 		if(i == correct_index):
-			answers.append(question.letter)
+			lett = question
 		else:
-			answers.append(rand_letters[j].letter)
+			lett = rand_letters[j]
 			j += 1
+		
+		Watchman.data_dict[lett.get_foreign()] = lett.letter
+		
+		answers.append(lett.get_foreign())
 	
 	
 	return [type, question.letter, correct_index + 1, answers]
