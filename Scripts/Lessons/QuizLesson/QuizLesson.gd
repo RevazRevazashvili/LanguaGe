@@ -1,10 +1,11 @@
 extends Lesson
-class_name SoundLesson 
+class_name QuizLesson
 
 @export
 var right_answer : int
 
-var question
+@export
+var question : String
 
 var answer1
 var answer2
@@ -13,20 +14,19 @@ var answer4
 
 
 @onready
-var question_audio = $VBoxContainer/TopPart/Button/Audio
-
-
-@onready
-var button_one : Button = $VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer1
+var question_label : Label = $VBoxContainer/TopPart/Label
 
 @onready
-var button_two : Button = $VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer2
+var button_one : Button = $VBoxContainer/BottomPart/VBoxContainer/Answer1
 
 @onready
-var button_three : Button = $VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer3
+var button_two : Button = $VBoxContainer/BottomPart/VBoxContainer/Answer2
 
 @onready
-var button_four : Button = $VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer4
+var button_three : Button = $VBoxContainer/BottomPart/VBoxContainer/Answer3
+
+@onready
+var button_four : Button = $VBoxContainer/BottomPart/VBoxContainer/Answer4
 
 
 var _selected_answer : int	# გვიჩვენებს რომელი პასუხია არჩეული (0 ნიშნავს რომ არაა პასუხი არჩეული)
@@ -40,6 +40,7 @@ func initialize():
 	load_question()
 	self.visible = true
 
+
 func deinitialize():
 	self.visible = false
 	button_one.button_pressed = false
@@ -47,7 +48,8 @@ func deinitialize():
 	button_three.button_pressed = false
 	button_four.button_pressed = false
 
-func load_info(question, right_answer : int, answer1, answer2, answer3, answer4):
+
+func load_info(question : String, right_answer : int, answer1, answer2, answer3, answer4):
 	self.question = question
 	self.right_answer = right_answer
 	self.answer1 = answer1
@@ -59,44 +61,40 @@ func load_info(question, right_answer : int, answer1, answer2, answer3, answer4)
 func load_answers():
 	if(!answer1.is_empty()):
 		# ტექსტურის ჩატვირთვა
-		button_one.icon = load(DataManager.get_letter_icon_path(answer1))
+		button_one.text = answer1
 		
 		# ხმის ჩატვირთვა
 		load_audio_on(button_one, answer1)
 		
 	if(!answer2.is_empty()):
 		# ტექსტურის ჩატვირთვა
-		button_two.icon = load(DataManager.get_letter_icon_path(answer2))
+		button_two.text = answer2
 		
 		# ხმის ჩატვირთვა
 		load_audio_on(button_two, answer2)
 	
 	if(!answer3.is_empty()):
 		# ტექსტურის ჩატვირთვა
-		button_three.icon = load(DataManager.get_letter_icon_path(answer3))
+		button_three.text = answer3
 		
 		# ხმის ჩატვირთვა
 		load_audio_on(button_three, answer3)
 	
 	if(!answer4.is_empty()):
 		# ტექსტურის ჩატვირთვა
-		button_four.icon = load(DataManager.get_letter_icon_path(answer4))
+		button_four.text = answer4
 		
 		# ხმის ჩატვირთვა
 		load_audio_on(button_four, answer4)
 
-
 func load_question():
 	if(!question.is_empty()):
-		# ხმის ჩატვირთვა
-		question_audio.stream = load(DataManager.get_letter_sound_path(question))
-
+		question_label.text = question
 
 func load_audio_on(button, audio_label):
 	var audio = button.get_child(0) as AudioStreamPlayer2D
 	if audio != null:
 		audio.stream = load(DataManager.get_letter_sound_path(audio_label))
-
 
 func check_if_answered():
 	return _selected_answer != 0

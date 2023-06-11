@@ -24,3 +24,8 @@ func eval():
 func increment_practice():
 	practice += 1
 
+# აბრუნებს არჩეული უცხო ენოვან თარგმანს
+func get_foreign():
+	match Watchman.current_language:
+		Watchman.LANGUAGE.eng: return eng
+		Watchman.LANGUAGE.rus: return rus

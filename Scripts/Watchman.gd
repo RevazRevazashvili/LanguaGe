@@ -1,8 +1,9 @@
 extends Node
 # Me is singleton bitch
 
+enum LANGUAGE {eng, rus}				# გვიჩვენებს სასწავლო ენებს
 
-enum TEST_TYPE{quiz, sound, text}	# გვიჩვენებს გაკვეთილში ტესტის ტიპს
+enum TEST_TYPE{quiz, sound, text}		# გვიჩვენებს გაკვეთილში ტესტის ტიპს
 
 enum LESSON_TYPE {lett, s_wrd, mixd}	# გვიჩვენებს ჩასატვირთი გაკვეთილის ტიპს
 
@@ -11,11 +12,15 @@ var lessons_enums : Array[LESSON_TYPE]	# ჩასატვირთი გა�
 var lesson_controller : Lessons_util	# მიდინარე ჩატვირთული გაკვეთილის კონტროლერი (მაში შედის ინფორმაცია რა დათა ჩაიტვირტება გაკვეთილში და როგორი)
 
 
+var data_dict : Dictionary				# შეინახავს უცხოურიდან ქართულზე თარგმანს (ფაილებთან წვდომისთვის)
+
 
 var setup_finished = false	# ცვლადი გვიჩვენებს საწყისი ჩატვირთვა მოხდა თუ არა
 
 var current_header : String	# მიმდინარე სცენის სათაური (რაც თავში დაიწერება)
 
+
+var current_language : LANGUAGE = LANGUAGE.eng	# გვიჩვენებს არჩეულ ენას
 
 
 func _ready() -> void:
@@ -46,17 +51,7 @@ func go_to_unit_1():
 	Loading.start_loading()
 	current_header = "Unit 1"
 	
-	# load info about unit 1 from database
-	# info will include:
-	# - array of lesson tags (eg. 1-st will be (letters, sound lessons), 2-nd (simple_words, translations, ect.)
-	# these tags will be loaded into json file
-	
-	#data = Data_saver.load_data()
-	
-	# loading appropriate lessons
 	lessons_enums = [LESSON_TYPE.lett, LESSON_TYPE.s_wrd, LESSON_TYPE.mixd]
-	
-	
 	
 	var timer = get_tree().create_timer(1)
 	

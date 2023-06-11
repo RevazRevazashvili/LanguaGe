@@ -2,7 +2,7 @@ extends Node
 
 class_name Lessons_util
 
-
+var TYPE
 
 func initialize() -> void:
 	pass

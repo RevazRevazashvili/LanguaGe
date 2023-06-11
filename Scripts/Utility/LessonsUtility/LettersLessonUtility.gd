@@ -2,13 +2,16 @@ extends Lessons_util
 
 class_name Letters_lesson_util
 
-
-
 var letter_data : Letter_saver		# შენახული ასოები
 
 var chosen_letters : Dictionary		# შერჩეული ასოები პლიუს ინფორმაცია მათ გავლილ გაკვეთილებზე
 
 var practiced : Array[Letter]		# ნავარჯიშები ასოების სია (chosen_letters იდან ამოყრილი დასწავლის შემდეგ)
+
+
+
+func _ready() -> void:
+	TYPE = Watchman.LESSON_TYPE.lett
 
 
 func initialize() -> void:
@@ -76,7 +79,7 @@ func _get_quiz_for(letter : Letter):
 	var type = Watchman.TEST_TYPE.quiz
 	
 	# უნდა დავაბრუნოთ კითხვა
-	var question = letter.letter
+	var question = letter
 	
 	# უნდა დავაბრუნოთ 4 შესაძლო ვარიანტი
 	var correct_index = randi_range(0,3)
@@ -88,20 +91,21 @@ func _get_quiz_for(letter : Letter):
 	var j = 0
 	for i in range(0, 4):
 		if(i == correct_index):
-			answers.append(question)
+			answers.append(question.get_foreign())
 		else:
-			answers.append(rand_letters[j].letter)
+			answers.append(rand_letters[j].get_foreign())
 			j += 1
 	
 	
-	return [type, question, correct_index + 1, answers]
+	
+	return [type, question.letter, correct_index + 1, answers]
 
 func _get_sound_for(letter : Letter):
 	# უნდა დავაბრუნოთ ტიპი 
-	var type = Watchman.TEST_TYPE.quiz
+	var type = Watchman.TEST_TYPE.sound
 	
 	# უნდა დავაბრუნოთ კითხვა
-	var question = letter.letter
+	var question = letter
 	
 	# უნდა დავაბრუნოთ 4 შესაძლო ვარიანტი
 	var correct_index = randi_range(0,3)
@@ -113,13 +117,14 @@ func _get_sound_for(letter : Letter):
 	var j = 0
 	for i in range(0, 4):
 		if(i == correct_index):
-			answers.append(question)
+			answers.append(question.letter)
 		else:
 			answers.append(rand_letters[j].letter)
 			j += 1
 	
 	
-	return [type, question, correct_index + 1, answers]
+	return [type, question.letter, correct_index + 1, answers]
+
 
 func _get_text_for(letter : Letter):
 	pass
