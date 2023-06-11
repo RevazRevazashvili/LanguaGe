@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlm4nk3t7wv47"]
+[gd_scene load_steps=7 format=3 uid="uid://otwobb58s70b"]
 
 [ext_resource type="Script" path="res://Scripts/Lessons/QuizLesson/QuizLesson.gd" id="1_o7dii"]
 [ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="2_qswis"]
+[ext_resource type="Script" path="res://Scripts/Lessons/SimpleAudioController.gd" id="3_oiyvj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0qd1"]
 content_margin_left = 40.0
@@ -140,6 +141,9 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_eh3ty")
 toggle_mode = true
 icon_alignment = 1
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/BottomPart/VBoxContainer/Answer1"]
+script = ExtResource("3_oiyvj")
+
 [node name="Answer2" type="Button" parent="VBoxContainer/BottomPart/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -150,6 +154,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_djxoi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_eh3ty")
 toggle_mode = true
 icon_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/BottomPart/VBoxContainer/Answer2"]
+script = ExtResource("3_oiyvj")
 
 [node name="Answer3" type="Button" parent="VBoxContainer/BottomPart/VBoxContainer"]
 layout_mode = 2
@@ -162,6 +169,9 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_eh3ty")
 toggle_mode = true
 icon_alignment = 1
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/BottomPart/VBoxContainer/Answer3"]
+script = ExtResource("3_oiyvj")
+
 [node name="Answer4" type="Button" parent="VBoxContainer/BottomPart/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -172,6 +182,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_djxoi")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_eh3ty")
 toggle_mode = true
 icon_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="VBoxContainer/BottomPart/VBoxContainer/Answer4"]
+script = ExtResource("3_oiyvj")
 
 [node name="Control" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 300)

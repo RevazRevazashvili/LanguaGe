@@ -1,25 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://d2yecjsjhlnu0"]
+[gd_scene load_steps=12 format=3 uid="uid://d2yecjsjhlnu0"]
 
 [ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="1_q65b8"]
 [ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/SoundLessons.gd" id="1_riujm"]
 [ext_resource type="Texture2D" uid="uid://bf4k3tntdwpgd" path="res://Assets/Common/Sound_icons.png" id="2_1dd1n"]
 [ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/Audio.gd" id="4_0sjwb"]
-[ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/Audio1.gd" id="5_4madq"]
-[ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/Audio2.gd" id="7_j5nc3"]
-[ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/Audio3.gd" id="9_1wqrx"]
-[ext_resource type="Script" path="res://Scripts/Lessons/SoundLesson/Audio4.gd" id="11_3ddpn"]
+[ext_resource type="Script" path="res://Scripts/Lessons/SimpleAudioController.gd" id="5_vv0pf"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6bqw"]
-content_margin_left = 40.0
-content_margin_top = 15.0
-content_margin_right = 40.0
-content_margin_bottom = 45.0
-bg_color = Color(0.0980392, 0.0352941, 0.2, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hrsur"]
+content_margin_bottom = 35.0
+bg_color = Color(0.686275, 0, 0, 1)
 border_width_bottom = 15
-border_color = Color(0.317647, 0.239216, 0.447059, 1)
+border_color = Color(0.564706, 0.121569, 0, 0.839216)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
@@ -27,11 +18,33 @@ corner_radius_bottom_left = 25
 expand_margin_top = 15.0
 anti_aliasing_size = 0.5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7mj1"]
-content_margin_left = 40.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bs5g"]
+content_margin_bottom = 35.0
+bg_color = Color(0.686275, 0, 0, 1)
+border_width_bottom = 15
+border_color = Color(0.564706, 0.121569, 0, 0.839216)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_top = 15.0
+anti_aliasing_size = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6guqi"]
+content_margin_left = 0.0
 content_margin_top = 15.0
-content_margin_right = 40.0
-content_margin_bottom = 45.0
+content_margin_right = 0.0
+content_margin_bottom = 35.0
+bg_color = Color(0.686275, 0, 0, 1)
+border_color = Color(1, 0.337255, 0.184314, 0.839216)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+anti_aliasing_size = 0.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6bqw"]
+content_margin_bottom = 25.0
 bg_color = Color(0.0980392, 0.0352941, 0.2, 1)
 border_width_left = 5
 border_width_top = 5
@@ -46,10 +59,10 @@ expand_margin_top = 15.0
 anti_aliasing_size = 0.5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fesay"]
-content_margin_left = 40.0
+content_margin_left = 0.0
 content_margin_top = 15.0
-content_margin_right = 40.0
-content_margin_bottom = 45.0
+content_margin_right = 0.0
+content_margin_bottom = 25.0
 bg_color = Color(0.686275, 0, 0, 1)
 border_width_left = 5
 border_width_top = 5
@@ -105,6 +118,12 @@ grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
 theme = ExtResource("1_q65b8")
+theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxFlat_hrsur")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1bs5g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6guqi")
+text = "
+"
 icon = ExtResource("2_1dd1n")
 icon_alignment = 1
 expand_icon = true
@@ -137,12 +156,14 @@ size_flags_horizontal = 3
 theme_override_constants/separation = 50
 
 [node name="Answer1" type="Button" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(375, 325)
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 theme = ExtResource("1_q65b8")
+theme_override_font_sizes/font_size = 150
 theme_override_styles/normal = SubResource("StyleBoxFlat_e6bqw")
-theme_override_styles/hover = SubResource("StyleBoxFlat_q7mj1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e6bqw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fesay")
 theme_override_styles/focus = SubResource("StyleBoxFlat_fesay")
 toggle_mode = true
@@ -150,13 +171,15 @@ icon_alignment = 1
 
 [node name="Audio1" type="AudioStreamPlayer2D" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer1"]
 stream = SubResource("AudioStreamMP3_6uc21")
-script = ExtResource("5_4madq")
+script = ExtResource("5_vv0pf")
 
 [node name="Answer2" type="Button" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(375, 325)
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 theme = ExtResource("1_q65b8")
+theme_override_font_sizes/font_size = 150
 theme_override_styles/normal = SubResource("StyleBoxFlat_e6bqw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_e6bqw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fesay")
@@ -165,7 +188,7 @@ toggle_mode = true
 icon_alignment = 1
 
 [node name="Audio2" type="AudioStreamPlayer2D" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer2"]
-script = ExtResource("7_j5nc3")
+script = ExtResource("5_vv0pf")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/BottomPart/HBoxContainer"]
 layout_mode = 2
@@ -173,10 +196,12 @@ size_flags_horizontal = 3
 theme_override_constants/separation = 50
 
 [node name="Answer3" type="Button" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(375, 325)
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 theme = ExtResource("1_q65b8")
+theme_override_font_sizes/font_size = 150
 theme_override_styles/normal = SubResource("StyleBoxFlat_e6bqw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_e6bqw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fesay")
@@ -185,13 +210,15 @@ toggle_mode = true
 icon_alignment = 1
 
 [node name="Audio3" type="AudioStreamPlayer2D" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer3"]
-script = ExtResource("9_1wqrx")
+script = ExtResource("5_vv0pf")
 
 [node name="Answer4" type="Button" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(375, 325)
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
 theme = ExtResource("1_q65b8")
+theme_override_font_sizes/font_size = 150
 theme_override_styles/normal = SubResource("StyleBoxFlat_e6bqw")
 theme_override_styles/hover = SubResource("StyleBoxFlat_e6bqw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_fesay")
@@ -200,7 +227,7 @@ toggle_mode = true
 icon_alignment = 1
 
 [node name="Audio4" type="AudioStreamPlayer2D" parent="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer4"]
-script = ExtResource("11_3ddpn")
+script = ExtResource("5_vv0pf")
 
 [node name="BottomMargin" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 300)
@@ -222,10 +249,6 @@ text = "Confirm"
 
 [connection signal="pressed" from="VBoxContainer/TopPart/Button" to="VBoxContainer/TopPart/Button/Audio" method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer1" to="." method="_on_answer_1_pressed"]
-[connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer1" to="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer1/Audio1" method="_on_answer_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer2" to="." method="_on_answer_2_pressed"]
-[connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer2" to="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer/Answer2/Audio2" method="_on_answer_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer3" to="." method="_on_answer_3_pressed"]
-[connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer3" to="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer3/Audio3" method="_on_answer_3_pressed"]
 [connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer4" to="." method="_on_answer_4_pressed"]
-[connection signal="pressed" from="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer4" to="VBoxContainer/BottomPart/HBoxContainer/VBoxContainer2/Answer4/Audio4" method="_on_answer_4_pressed"]
