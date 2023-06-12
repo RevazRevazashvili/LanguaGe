@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://cayjbcb7stwhd"]
+
+[ext_resource type="Texture2D" uid="uid://cwryosqv6iamk" path="res://Assets/Common/Background_color.png" id="1_pqx6e"]
+[ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="2_g67h1"]
+[ext_resource type="PackedScene" uid="uid://da28g64xeig3o" path="res://Scenes/LessonMenu/SwipeMenu.tscn" id="3_8750e"]
+[ext_resource type="PackedScene" uid="uid://boqgvdeaxj17g" path="res://Scenes/TopBar/TopBar.tscn" id="4_x25ig"]
+
+[node name="LessonMenu" type="Node2D"]
+
+[node name="Background" type="NinePatchRect" parent="."]
+offset_right = 1080.0
+offset_bottom = 1920.0
+texture = ExtResource("1_pqx6e")
+
+[node name="Button" type="Button" parent="Background"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -275.0
+offset_top = -420.0
+offset_right = 275.0
+offset_bottom = -250.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 10
+focus_mode = 0
+theme = ExtResource("2_g67h1")
+theme_override_font_sizes/font_size = 80
+text = "Start"
+
+[node name="SwipeMenu" parent="." instance=ExtResource("3_8750e")]
+clip_contents = false
+custom_minimum_size = Vector2(1080, 960)
+offset_top = 400.0
+offset_right = 1080.0
+offset_bottom = 1360.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="TopBar" parent="." instance=ExtResource("4_x25ig")]
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]

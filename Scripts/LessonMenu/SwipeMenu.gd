@@ -22,6 +22,7 @@ var card_space: int = $CenterContainer/MarginContainer/HBoxContainer.get("theme_
 @onready
 var card_nodes: Array = $CenterContainer/MarginContainer/HBoxContainer.get_children()
 
+var ready_complete = false
 
 func _ready() -> void:
 	await get_tree().process_frame
@@ -36,7 +37,9 @@ func _ready() -> void:
 	
 	scroll_horizontal = card_x_position[card_current_index]
 	scroll()
-	
+	ready_complete = true
+
+
 func _process(delta: float) -> void:
 	for _index in range(card_x_position.size()):
 		var _card_pos_x: float = card_x_position[_index]
@@ -85,3 +88,22 @@ func _on_gui_input(event: InputEvent) -> void:
 			scroll_tween.stop()
 		else:
 			scroll()
+
+
+func _on_lesson_menu_resized() -> void:
+	if !ready_complete: return
+	
+	await get_tree().process_frame
+	
+	card_x_position = []
+	
+	get_h_scroll_bar().modulate.a = 0
+	
+	for _card in card_nodes:
+		var _card_pos_x: float = (margin_r + _card.position.x) - ((size.x - _card.size.x)/2)
+		_card.pivot_offset = (_card.size / 2)
+		card_x_position.append(_card_pos_x)
+		print(_card_pos_x)
+	
+	scroll_horizontal = card_x_position[card_current_index]
+	scroll()
