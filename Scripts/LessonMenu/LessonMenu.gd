@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 # we load icons and lessons identifiers from database

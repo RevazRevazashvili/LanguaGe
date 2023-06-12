@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cayjbcb7stwhd"]
+[gd_scene load_steps=6 format=3 uid="uid://4t6wydf4plye"]
 
 [ext_resource type="Texture2D" uid="uid://cwryosqv6iamk" path="res://Assets/Common/Background_color.png" id="1_f3fk3"]
 [ext_resource type="PackedScene" uid="uid://da28g64xeig3o" path="res://Scenes/LessonMenu/SwipeMenu.tscn" id="1_gr7jh"]
@@ -6,12 +6,22 @@
 [ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="2_swbq0"]
 [ext_resource type="PackedScene" uid="uid://boqgvdeaxj17g" path="res://Scenes/TopBar/TopBar.tscn" id="4_bdcma"]
 
-[node name="LessonMenu" type="Node2D"]
+[node name="LessonMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_sk3tf")
 
 [node name="Background" type="NinePatchRect" parent="."]
-offset_right = 1080.0
-offset_bottom = 1920.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_f3fk3")
 
 [node name="Button" type="Button" parent="Background"]
@@ -37,12 +47,22 @@ text = "Start"
 [node name="SwipeMenu" parent="." instance=ExtResource("1_gr7jh")]
 clip_contents = false
 custom_minimum_size = Vector2(1080, 960)
-offset_top = 400.0
-offset_right = 1080.0
-offset_bottom = 1360.0
+layout_mode = 0
+anchor_top = 0.208333
+anchor_right = 1.0
+anchor_bottom = 0.708333
 size_flags_horizontal = 6
 size_flags_vertical = 6
+metadata/_edit_use_anchors_ = true
 
 [node name="TopBar" parent="." instance=ExtResource("4_bdcma")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+offset_right = 0.0
+offset_bottom = 0.0
+metadata/_edit_use_anchors_ = true
 
+[connection signal="resized" from="." to="SwipeMenu" method="_on_lesson_menu_resized"]
 [connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]
