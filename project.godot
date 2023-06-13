@@ -15,6 +15,7 @@ run/main_scene="res://Scenes/Loading/LoadingScene.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 boot_splash/image="res://Assets/Loading/loading_screen.png"
+config/icon="res://Assets/logo.png"
 
 [autoload]
 
@@ -47,8 +48,8 @@ debug_esc={
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
-pointing/emulate_mouse_from_touch=false
 
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

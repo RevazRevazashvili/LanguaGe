@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://4t6wydf4plye"]
+[gd_scene load_steps=6 format=3 uid="uid://cayjbcb7stwhd"]
 
 [ext_resource type="Texture2D" uid="uid://cwryosqv6iamk" path="res://Assets/Common/Background_color.png" id="1_f3fk3"]
 [ext_resource type="PackedScene" uid="uid://da28g64xeig3o" path="res://Scenes/LessonMenu/SwipeMenu.tscn" id="1_gr7jh"]

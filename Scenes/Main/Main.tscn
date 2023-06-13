@@ -144,12 +144,8 @@ mouse_filter = 2
 
 [node name="TopBar2" parent="." instance=ExtResource("4_13qj5")]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 0.1
-offset_right = 0.0
-offset_bottom = 0.0
-metadata/_edit_use_anchors_ = true
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="TopBar" parent="." instance=ExtResource("4_rxago")]
 visible = false

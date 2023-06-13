@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://da28g64xeig3o"]
 
 [ext_resource type="Script" path="res://Scripts/LessonMenu/SwipeMenu.gd" id="1_0fu2u"]
-[ext_resource type="Texture2D" uid="uid://n0p8ruy5jc41" path="res://Assets/LessonMenu/lesson1.png" id="2_t3rsp"]
-[ext_resource type="Texture2D" uid="uid://bd8rqyoruro5t" path="res://Assets/LessonMenu/lesson2.png" id="3_alq8n"]
-[ext_resource type="Texture2D" uid="uid://dhwf185h2ia61" path="res://Assets/LessonMenu/lesson3.png" id="4_5bfhf"]
+[ext_resource type="Texture2D" uid="uid://bi5xy062mkowj" path="res://Assets/LessonMenu/dapa aso.png" id="2_ec5et"]
+[ext_resource type="Texture2D" uid="uid://blfim2lkqrgpy" path="res://Assets/LessonMenu/dapa sit.png" id="3_hfbl6"]
+[ext_resource type="Texture2D" path="res://Assets/LessonMenu/dapa PR.png" id="4_s7bf6"]
 
 [node name="SwipeMenu" type="ScrollContainer"]
 custom_minimum_size = Vector2(1080, 1920)
@@ -29,15 +29,21 @@ mouse_filter = 2
 theme_override_constants/separation = 70
 
 [node name="Lesson1" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(600, 800)
 layout_mode = 2
-texture = ExtResource("2_t3rsp")
+texture = ExtResource("2_ec5et")
+expand_mode = 3
 
 [node name="Lesson2" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(600, 800)
 layout_mode = 2
-texture = ExtResource("3_alq8n")
+texture = ExtResource("3_hfbl6")
+expand_mode = 3
 
 [node name="Lesson3" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(600, 800)
 layout_mode = 2
-texture = ExtResource("4_5bfhf")
+texture = ExtResource("4_s7bf6")
+expand_mode = 3
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
