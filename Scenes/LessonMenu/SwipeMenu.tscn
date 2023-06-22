@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/LessonMenu/SwipeMenu.gd" id="1_0fu2u"]
 [ext_resource type="Texture2D" uid="uid://bi5xy062mkowj" path="res://Assets/LessonMenu/dapa aso.png" id="2_ec5et"]
 [ext_resource type="Texture2D" uid="uid://blfim2lkqrgpy" path="res://Assets/LessonMenu/dapa sit.png" id="3_hfbl6"]
-[ext_resource type="Texture2D" path="res://Assets/LessonMenu/dapa PR.png" id="4_s7bf6"]
+[ext_resource type="Texture2D" uid="uid://c7q4vuov3jvde" path="res://Assets/LessonMenu/dapa PR.png" id="4_s7bf6"]
 
 [node name="SwipeMenu" type="ScrollContainer"]
 custom_minimum_size = Vector2(1080, 1920)

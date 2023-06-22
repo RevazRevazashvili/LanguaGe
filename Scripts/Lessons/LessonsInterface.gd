@@ -81,7 +81,6 @@ func _load_next_lesson():
 # this functions need to be rewritten
 func _load_last_page():
 	print("your result is " + str(current_score))
-	
 	########Uncomment in Production########
 	#Watchman.lesson_controller.save_data()
 

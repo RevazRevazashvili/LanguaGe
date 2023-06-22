@@ -42,6 +42,13 @@ visible = false
 layout_mode = 1
 
 [node name="TopBar" parent="." instance=ExtResource("1_2805f")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+offset_right = 0.0
+offset_bottom = 0.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Continue" type="Button" parent="."]
 custom_minimum_size = Vector2(700, 150)

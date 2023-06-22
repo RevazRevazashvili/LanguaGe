@@ -12,6 +12,7 @@ var practiced : Array[Letter]		# ნავარჯიშები ასოე�
 
 func _ready() -> void:
 	TYPE = Watchman.LESSON_TYPE.lett
+	lessons_count = 9
 
 
 func initialize() -> void:
