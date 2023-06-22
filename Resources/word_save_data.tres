@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Word_saver" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Utility/Data/Word_Saver.gd" id="1_24jb6"]
+
+[resource]
+script = ExtResource("1_24jb6")
+words = Array[Resource("res://Scripts/Utility/Data/Word_Data.gd")]([])

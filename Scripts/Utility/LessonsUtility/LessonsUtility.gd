@@ -4,6 +4,8 @@ class_name Lessons_util
 
 var TYPE
 
+var lessons_count
+
 func initialize() -> void:
 	pass
 
