@@ -9,50 +9,60 @@
 layout_mode = 3
 anchor_right = 1.0
 anchor_bottom = 0.1
-metadata/_edit_use_anchors_ = true
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -100.0
+offset_bottom = -84.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.317647, 0.239216, 0.447059, 1)
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="Control/ColorRect"]
 anchors_preset = 0
 anchor_right = 0.263889
 anchor_bottom = 1.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Sun" type="Sprite2D" parent="Control"]
+[node name="Sun" type="Sprite2D" parent="Control/ColorRect/Control"]
 position = Vector2(92, 94)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_3yqo1")
 
-[node name="Label" type="Label" parent="Control"]
+[node name="Label" type="Label" parent="Control/ColorRect/Control"]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.526316
-anchor_right = 0.859649
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = 169.0
+offset_right = 220.0
+offset_bottom = 192.0
 theme = ExtResource("3_6xd8c")
 theme_override_font_sizes/font_size = 90
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
-metadata/_edit_use_anchors_ = true
 
-[node name="BritishFlag" type="Sprite2D" parent="."]
+[node name="BritishFlag" type="Sprite2D" parent="Control/ColorRect"]
 position = Vector2(979.3, 103.3)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_btrgp")
 
-[node name="Logo" type="Sprite2D" parent="."]
+[node name="Logo" type="Sprite2D" parent="Control/ColorRect"]
 position = Vector2(540, 105)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_schhi")
