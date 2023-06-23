@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bb35uukgpal5i"]
+[gd_scene load_steps=8 format=3 uid="uid://bb35uukgpal5i"]
 
 [ext_resource type="PackedScene" uid="uid://boqgvdeaxj17g" path="res://Scenes/TopBar/TopBar.tscn" id="1_2805f"]
 [ext_resource type="Script" path="res://Scripts/Lessons/LessonsInterface.gd" id="1_kvnj6"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://otwobb58s70b" path="res://Scenes/Lessons/QuizLesson/QuizLesson.tscn" id="3_r4cq8"]
 [ext_resource type="PackedScene" uid="uid://d2yecjsjhlnu0" path="res://Scenes/Lessons/SoundLesson/SoundLessons.tscn" id="3_ymr3m"]
 [ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="5_i0v2a"]
+[ext_resource type="PackedScene" uid="uid://cjib8ywk1oyms" path="res://Scenes/Lessons/WritingLesson/WritingLesson.tscn" id="5_s572e"]
 
 [node name="LessonsInterface" type="Control"]
 layout_mode = 3
@@ -38,6 +39,10 @@ visible = false
 layout_mode = 1
 
 [node name="SoundLessons" parent="LessonsSpace" instance=ExtResource("3_ymr3m")]
+visible = false
+layout_mode = 1
+
+[node name="WritingLesson" parent="LessonsSpace" instance=ExtResource("5_s572e")]
 visible = false
 layout_mode = 1
 

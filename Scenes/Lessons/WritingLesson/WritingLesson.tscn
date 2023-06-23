@@ -86,7 +86,7 @@ grow_vertical = 2
 color = Color(0.317647, 0.239216, 0.447059, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="TextEdit" type="TextEdit" parent="VBoxContainer/TopPart"]
+[node name="Text" type="TextEdit" parent="VBoxContainer/TopPart"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -122,7 +122,7 @@ grow_vertical = 2
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_right = 40
 
-[node name="TextEdit" type="TextEdit" parent="VBoxContainer/BottomPart/MarginContainer"]
+[node name="AnswerField" type="TextEdit" parent="VBoxContainer/BottomPart/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 78
 theme_override_styles/normal = SubResource("StyleBoxFlat_eaxd3")
