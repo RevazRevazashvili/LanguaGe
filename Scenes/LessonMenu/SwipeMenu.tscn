@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://da28g64xeig3o"]
+[gd_scene load_steps=6 format=3 uid="uid://da28g64xeig3o"]
 
 [ext_resource type="Script" path="res://Scripts/LessonMenu/SwipeMenu.gd" id="1_0fu2u"]
 [ext_resource type="Texture2D" uid="uid://bi5xy062mkowj" path="res://Assets/LessonMenu/dapa aso.png" id="2_ec5et"]
+[ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="3_0oag4"]
 [ext_resource type="Texture2D" uid="uid://blfim2lkqrgpy" path="res://Assets/LessonMenu/dapa sit.png" id="3_hfbl6"]
 [ext_resource type="Texture2D" uid="uid://c7q4vuov3jvde" path="res://Assets/LessonMenu/dapa PR.png" id="4_s7bf6"]
 
@@ -34,16 +35,58 @@ layout_mode = 2
 texture = ExtResource("2_ec5et")
 expand_mode = 3
 
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/HBoxContainer/Lesson1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.3125
+anchor_right = 0.766667
+anchor_bottom = 0.4875
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_0oag4")
+text = "Letters"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="Lesson2" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(600, 800)
 layout_mode = 2
 texture = ExtResource("3_hfbl6")
 expand_mode = 3
 
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/HBoxContainer/Lesson2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.216667
+anchor_top = 0.3125
+anchor_right = 0.733333
+anchor_bottom = 0.4875
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_0oag4")
+text = "Words"
+metadata/_edit_use_anchors_ = true
+
 [node name="Lesson3" type="TextureRect" parent="CenterContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(600, 800)
 layout_mode = 2
 texture = ExtResource("4_s7bf6")
 expand_mode = 3
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/HBoxContainer/Lesson3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.191667
+anchor_top = 0.3125
+anchor_right = 0.838333
+anchor_bottom = 0.4875
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_0oag4")
+theme_override_font_sizes/font_size = 90
+text = "Practice"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

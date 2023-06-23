@@ -33,7 +33,6 @@ func _ready() -> void:
 		var _card_pos_x: float = (margin_r + _card.position.x) - ((size.x - _card.size.x)/2)
 		_card.pivot_offset = (_card.size / 2)
 		card_x_position.append(_card_pos_x)
-		print(_card_pos_x)
 	
 	scroll_horizontal = card_x_position[card_current_index]
 	scroll()

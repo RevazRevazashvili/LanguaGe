@@ -40,14 +40,14 @@ func get_next_lesson():
 	if val == 2:
 		chosen_letters.erase(lett)
 		practiced.append(lett)
-		#return _get_text_for(lett)
-		return _get_sound_for(lett)
+		return _get_text_for(lett)
 
 func save_data():
 	for letter in practiced:
 		letter.increment_practice()
 	
 	letter_data.save_data()
+
 
 func _load_letter_data():
 	letter_data = Letter_saver.load_data()
@@ -73,7 +73,6 @@ func _choose_letters():
 			three = letter
 	
 	return {one : 0, two : 0, three : 0}
-
 
 func _get_quiz_for(letter : Letter):
 	# უნდა დავაბრუნოთ ტიპი 
@@ -137,9 +136,21 @@ func _get_sound_for(letter : Letter):
 	
 	return [type, question.letter, correct_index + 1, answers]
 
-
 func _get_text_for(letter : Letter):
-	pass
+	# უნდა დავაბრუნოთ ტიპი 
+	var type = Watchman.TEST_TYPE.text
+	
+	# უნდა დავაბრუნოთ კითხვა
+	var question = letter.letter
+	
+	var answer = letter.eng # დეფოლტად ინგლისური იყოს
+	
+	if(Watchman.current_language == Watchman.LANGUAGE.eng):
+		answer = letter.eng
+	elif (Watchman.current_language == Watchman.LANGUAGE.rus):
+		answer = letter.rus
+	
+	return [type, question, answer]
 
 
 func _get_3_random_letters(letter : Letter):

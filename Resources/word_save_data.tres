@@ -1,7 +1,16 @@
-[gd_resource type="Resource" script_class="Word_saver" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="Word_saver" load_steps=4 format=3 uid="uid://dddtup7ob318l"]
 
 [ext_resource type="Script" path="res://Scripts/Utility/Data/Word_Saver.gd" id="1_24jb6"]
+[ext_resource type="Script" path="res://Scripts/Utility/Data/Word_Data.gd" id="2_7okf4"]
+
+[sub_resource type="Resource" id="Resource_cgik2"]
+script = ExtResource("2_7okf4")
+word = ""
+eng = ""
+rus = ""
+priority = 0
+practice = 0
 
 [resource]
 script = ExtResource("1_24jb6")
-words = Array[Resource("res://Scripts/Utility/Data/Word_Data.gd")]([])
+words = Array[ExtResource("2_7okf4")]([SubResource("Resource_cgik2")])
