@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bf6blu2h6ydxb"
+path="res://.godot/imported/lesson completed.mp3-74164d0cdbd4d6573116fb8ad95c156f.mp3str"
+
+[deps]
+
+source_file="res://sounds/lesson complited/lesson completed.mp3"
+dest_files=["res://.godot/imported/lesson completed.mp3-74164d0cdbd4d6573116fb8ad95c156f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

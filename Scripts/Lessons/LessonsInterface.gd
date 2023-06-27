@@ -30,6 +30,9 @@ var lesson_compleated_page = false
 func _on_continue_pressed() -> void:
 	if current_lesson.is_selected_correct():
 		current_score += 1
+		$CorrectAnswerAudio.play()
+	else:
+		$IncorrectAnswerAudio.play()
 	
 	continue_button.disabled = true;
 	
@@ -82,10 +85,11 @@ func _load_next_lesson():
 
 # this functions need to be rewritten
 func _load_last_page():
+	last_page.get_node("LessonComplitedAudio").play()
 	current_lesson.deinitialize()
-	print("your result is " + str(current_score))
 	continue_button.disabled = false
 	last_page.visible = true
+	
 	#Watchman.lesson_controller.save_data()
 
 

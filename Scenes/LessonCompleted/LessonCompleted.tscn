@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0147m07rd5t0"]
+[gd_scene load_steps=6 format=3 uid="uid://c0147m07rd5t0"]
 
 [ext_resource type="Texture2D" uid="uid://cudeoevacrk7f" path="res://Assets/Loading/pure_background.png" id="1_xi0ux"]
 [ext_resource type="Texture2D" uid="uid://chul6yj8tyyxa" path="res://Assets/Common/lesson complete.png" id="3_lol0s"]
 [ext_resource type="Texture2D" uid="uid://gh3ytpvk1nyq" path="res://Assets/Common/Rabbit.png" id="4_b7xwf"]
 [ext_resource type="Texture2D" uid="uid://dkv48wq14yp3d" path="res://Assets/Common/check mark.png" id="5_lxor3"]
+[ext_resource type="AudioStream" uid="uid://bf6blu2h6ydxb" path="res://sounds/lesson complited/lesson completed.mp3" id="5_v280r"]
 
 [node name="LessonCompleted" type="Control"]
 layout_mode = 3
@@ -87,3 +88,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_lxor3")
 expand_mode = 4
+
+[node name="LessonComplitedAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_v280r")

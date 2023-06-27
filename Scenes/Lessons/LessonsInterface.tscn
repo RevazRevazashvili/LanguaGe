@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bwje2c140jfw6"]
+[gd_scene load_steps=12 format=3 uid="uid://bwje2c140jfw6"]
 
 [ext_resource type="PackedScene" uid="uid://boqgvdeaxj17g" path="res://Scenes/TopBar/TopBar.tscn" id="1_2805f"]
 [ext_resource type="Script" path="res://Scripts/Lessons/LessonsInterface.gd" id="1_kvnj6"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://cjib8ywk1oyms" path="res://Scenes/Lessons/WritingLesson/WritingLesson.tscn" id="5_s572e"]
 [ext_resource type="PackedScene" uid="uid://c0147m07rd5t0" path="res://Scenes/LessonCompleted/LessonCompleted.tscn" id="7_e5h73"]
 [ext_resource type="Script" path="res://Scripts/LessonCompleted/LessonCompleted.gd" id="8_1peb5"]
+[ext_resource type="AudioStream" uid="uid://c5cdd3eo5tc4o" path="res://sounds/correct answer/correct answer.mp3" id="10_pcnd0"]
+[ext_resource type="AudioStream" uid="uid://bv5v6vttaaj8e" path="res://sounds/wrong answer/wrong answer.mp3" id="11_asbvi"]
 
 [node name="LessonsInterface" type="Control"]
 layout_mode = 3
@@ -76,5 +78,11 @@ focus_mode = 0
 theme = ExtResource("5_i0v2a")
 text = "Continue"
 metadata/_edit_use_anchors_ = true
+
+[node name="CorrectAnswerAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_pcnd0")
+
+[node name="IncorrectAnswerAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_asbvi")
 
 [connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
