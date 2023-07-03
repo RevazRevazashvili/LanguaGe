@@ -1,9 +1,7 @@
 extends Control
 
-
-@export # this wont be needed remove it
-var last_page: Node					# ტესტის დამთავრების გვერდი რომელიც ყველა ტესტის გავლის შემდეგ გამოჩნდება
-
+@onready
+var last_page = $LessonCompleted 					# ტესტის დამთავრების გვერდი რომელიც ყველა ტესტის გავლის შემდეგ გამოჩნდება
 
 # ტესტების ტიპები რომლებიც ჩაიტვირთება მოთხოვნებისამებრ
 @onready
@@ -27,16 +25,24 @@ var current_lesson_index = 0		# მიმდინარე ტესტის �
 
 var current_score = 0				# მიმდინარე ქულა (სწორად გაცემული კითხვების რაოდენობა)
 
+var lesson_compleated_page = false
 
 func _on_continue_pressed() -> void:
 	if current_lesson.is_selected_correct():
 		current_score += 1
+		$CorrectAnswerAudio.play()
+	else:
+		$IncorrectAnswerAudio.play()
 	
 	continue_button.disabled = true;
 	
 	if(_has_next_lesson()):
 		_load_next_lesson()
+	elif(lesson_compleated_page):
+		SceneController.back_to_previous()
 	else:
+		lesson_compleated_page = true
+		last_page.set_score(current_score)
 		_load_last_page()
 
 
@@ -79,8 +85,11 @@ func _load_next_lesson():
 
 # this functions need to be rewritten
 func _load_last_page():
-	print("your result is " + str(current_score))
-	########Uncomment in Production########
+	last_page.get_node("LessonComplitedAudio").play()
+	current_lesson.deinitialize()
+	continue_button.disabled = false
+	last_page.visible = true
+	
 	#Watchman.lesson_controller.save_data()
 
 

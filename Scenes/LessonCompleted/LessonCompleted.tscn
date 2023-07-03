@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0147m07rd5t0"]
+
+[ext_resource type="Texture2D" uid="uid://cudeoevacrk7f" path="res://Assets/Loading/pure_background.png" id="1_xi0ux"]
+[ext_resource type="Texture2D" uid="uid://chul6yj8tyyxa" path="res://Assets/Common/lesson complete.png" id="3_lol0s"]
+[ext_resource type="Texture2D" uid="uid://gh3ytpvk1nyq" path="res://Assets/Common/Rabbit.png" id="4_b7xwf"]
+[ext_resource type="Texture2D" uid="uid://dkv48wq14yp3d" path="res://Assets/Common/check mark.png" id="5_lxor3"]
+[ext_resource type="AudioStream" uid="uid://bf6blu2h6ydxb" path="res://sounds/lesson complited/lesson completed.mp3" id="5_v280r"]
+
+[node name="LessonCompleted" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xi0ux")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -976.0
+offset_right = -1.0
+offset_bottom = -768.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.6, 0, 1)
+theme_override_font_sizes/font_size = 150
+text = "9/10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -537.0
+offset_top = -765.0
+offset_right = 541.899
+offset_bottom = -373.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_lol0s")
+expand_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -410.0
+offset_top = -267.0
+offset_right = 32.0
+offset_bottom = 715.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_b7xwf")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = 71.0
+offset_right = 460.0
+offset_bottom = 501.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_lxor3")
+expand_mode = 4
+
+[node name="LessonComplitedAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_v280r")
