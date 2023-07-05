@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Data_saver" load_steps=35 format=3]
+[gd_resource type="Resource" script_class="Letter_saver" load_steps=35 format=3 uid="uid://70nhwjpsyi5a"]
 
 [ext_resource type="Script" path="res://Scripts/Utility/Data/Letter_Saver.gd" id="1_ev2ol"]
 [ext_resource type="Script" path="res://Scripts/Utility/Data/Letter_Data.gd" id="1_llqoq"]

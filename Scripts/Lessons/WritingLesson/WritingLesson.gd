@@ -45,3 +45,23 @@ func _answer_written():
 		emit_signal("selected")
 	else:
 		emit_signal("deselected")
+
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.is_action_released("enter"):
+			print("enter pressed")
+			$VBoxContainer/TopPart.visible = true
+			answer_field.virtual_keyboard_enabled = false
+
+
+func _on_answer_field_focus_entered():
+	print("focus entered")
+	$VBoxContainer/TopPart.visible = false
+	answer_field.virtual_keyboard_enabled = true
+
+
+func _on_answer_field_focus_exited():
+	print("focus exited")
+	$VBoxContainer/TopPart.visible = true
+	answer_field.virtual_keyboard_enabled = false
+	

@@ -9,6 +9,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1080.0
 offset_bottom = 192.0
+focus_mode = 1
+mouse_filter = 1
 script = ExtResource("1_5g8wp")
 
 [node name="Control" type="Control" parent="."]

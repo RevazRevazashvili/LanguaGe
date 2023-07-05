@@ -9,7 +9,6 @@ var words: Array[Word]
 func save_data():
 	ResourceSaver.save(self, SAVE_GAME_PATH)
 
-
 static func load_data():
 	if ResourceLoader.exists(SAVE_GAME_PATH):
 		return load(SAVE_GAME_PATH).duplicate(true)

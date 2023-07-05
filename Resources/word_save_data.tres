@@ -1,328 +1,329 @@
-[gd_resource type="Resource" script_class="Word_saver" load_steps=43 format=3 uid="uid://foqx4gkuovlc"]
+[gd_resource type="Resource" script_class="Word_saver" load_steps=43 format=3 uid="uid://b5xytc11oll5s"]
 
-[ext_resource type="Script" path="res://Scripts/Utility/Data/Word_Saver.gd" id="1_24jb6"]
-[ext_resource type="Script" path="res://Scripts/Utility/Data/Word_Data.gd" id="2_3de1q"]
+[ext_resource type="Script" path="res://Scripts/Utility/Data/Word_Saver.gd" id="1_65yih"]
+[ext_resource type="Script" path="res://Scripts/Utility/Data/Word_Data.gd" id="2_thehm"]
 
-[sub_resource type="Resource" id="Resource_v2cp3"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_e3qjh"]
+script = ExtResource("2_thehm")
 word = "გამარჯობა"
 eng = "hello"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_blk25"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_ik4tn"]
+script = ExtResource("2_thehm")
 word = "თამაში"
 eng = "play"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_jn8fq"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_y6g7b"]
+script = ExtResource("2_thehm")
 word = "სათამაშო"
 eng = "toy"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_k2u3u"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_150bn"]
+script = ExtResource("2_thehm")
 word = "ბიჭი"
 eng = "boy"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_qbg17"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_bx3vl"]
+script = ExtResource("2_thehm")
 word = "გოგო"
 eng = "girl"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_m0mwv"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_7unlj"]
+script = ExtResource("2_thehm")
 word = "სწავლა"
 eng = "teach"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_ucmqa"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_78ggv"]
+script = ExtResource("2_thehm")
 word = "დიდი"
 eng = "big"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_7xswc"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_33bcg"]
+script = ExtResource("2_thehm")
 word = "პატარა"
 eng = "small"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_jse68"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_t8hr5"]
+script = ExtResource("2_thehm")
 word = "სიარული"
 eng = "walk"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_5pr34"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_yp33x"]
+script = ExtResource("2_thehm")
 word = "სიტყვა"
 eng = "word"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_i7yiw"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_ysp2m"]
+script = ExtResource("2_thehm")
 word = "კარგი"
 eng = "good"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_tsvso"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_eu32u"]
+script = ExtResource("2_thehm")
 word = "ცუდი"
 eng = "bad"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_5025m"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_xy5ft"]
+script = ExtResource("2_thehm")
 word = "კაცი"
 eng = "man"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_ia5bg"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_xsamh"]
+script = ExtResource("2_thehm")
 word = "ქალი"
 eng = "woman"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_rsgih"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_m6col"]
+script = ExtResource("2_thehm")
 word = "ხე"
 eng = "tree"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_qstma"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_iqyf7"]
+script = ExtResource("2_thehm")
 word = "წყალი"
 eng = "water"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_44m3f"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_vhnja"]
+script = ExtResource("2_thehm")
 word = "მიწა"
 eng = "ground"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_e4csm"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_1v6p7"]
+script = ExtResource("2_thehm")
 word = "პლანეტა"
 eng = "planet"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_hv0qb"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_vawui"]
+script = ExtResource("2_thehm")
 word = "დედამიწა"
 eng = "earth"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_d43wx"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_v08kd"]
+script = ExtResource("2_thehm")
 word = "საქართველო"
 eng = "georgia"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_rb1q2"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_j6ogq"]
+script = ExtResource("2_thehm")
 word = "კატა"
 eng = "cat"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_a0tum"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_73ce8"]
+script = ExtResource("2_thehm")
 word = "ძროხა"
 eng = "cow"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_52mcx"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_ho36c"]
+script = ExtResource("2_thehm")
 word = "ძაღლი"
 eng = "dog"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_u7hyx"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_207wd"]
+script = ExtResource("2_thehm")
 word = "ლიმონი"
 eng = "lemon"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_nsx83"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_bl02e"]
+script = ExtResource("2_thehm")
 word = "თავი"
 eng = "head"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_7emyw"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_yckt3"]
+script = ExtResource("2_thehm")
 word = "ხალხი"
 eng = "people"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_rriux"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_6vwl0"]
+script = ExtResource("2_thehm")
 word = "ხარი"
 eng = "ox"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_ucrc6"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_0cd66"]
+script = ExtResource("2_thehm")
 word = "მელა"
 eng = "fox"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_4ube3"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_b5s1g"]
+script = ExtResource("2_thehm")
 word = "სურათი"
 eng = "image"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_q4bco"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_2h1en"]
+script = ExtResource("2_thehm")
 word = "ვირი"
 eng = "dunk"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_kckor"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_yu1hf"]
+script = ExtResource("2_thehm")
 word = "აქლემი"
 eng = "camel"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_3y54u"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_26i0s"]
+script = ExtResource("2_thehm")
 word = "თაგვი"
 eng = "mouse"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_60jjc"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_73fhd"]
+script = ExtResource("2_thehm")
 word = "დიახ"
 eng = "yes"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_xguet"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_hqk0l"]
+script = ExtResource("2_thehm")
 word = "არა"
 eng = "no"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_y2ces"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_6wv84"]
+script = ExtResource("2_thehm")
 word = "ფეხი"
 eng = "leg"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_wv5aa"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_r7pmr"]
+script = ExtResource("2_thehm")
 word = "ხელი"
 eng = "hand"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_47cgo"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_ahpvg"]
+script = ExtResource("2_thehm")
 word = "თმა"
 eng = "hair"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_swo23"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_halkt"]
+script = ExtResource("2_thehm")
 word = "ბანკი"
 eng = "bank"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_238rr"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_vusue"]
+script = ExtResource("2_thehm")
 word = "ზებრა"
 eng = "zebra"
 rus = ""
 priority = 0
 practice = 0
 
-[sub_resource type="Resource" id="Resource_6va43"]
-script = ExtResource("2_3de1q")
+[sub_resource type="Resource" id="Resource_ghjge"]
+script = ExtResource("2_thehm")
 word = "სახლი"
 eng = "house"
 rus = ""
 priority = 0
 practice = 0
 
+
 [resource]
-script = ExtResource("1_24jb6")
-words = Array[ExtResource("2_3de1q")]([SubResource("Resource_v2cp3"), SubResource("Resource_blk25"), SubResource("Resource_jn8fq"), SubResource("Resource_k2u3u"), SubResource("Resource_qbg17"), SubResource("Resource_m0mwv"), SubResource("Resource_ucmqa"), SubResource("Resource_7xswc"), SubResource("Resource_jse68"), SubResource("Resource_5pr34"), SubResource("Resource_i7yiw"), SubResource("Resource_tsvso"), SubResource("Resource_5025m"), SubResource("Resource_ia5bg"), SubResource("Resource_rsgih"), SubResource("Resource_qstma"), SubResource("Resource_44m3f"), SubResource("Resource_e4csm"), SubResource("Resource_hv0qb"), SubResource("Resource_d43wx"), SubResource("Resource_rb1q2"), SubResource("Resource_a0tum"), SubResource("Resource_52mcx"), SubResource("Resource_u7hyx"), SubResource("Resource_nsx83"), SubResource("Resource_7emyw"), SubResource("Resource_rriux"), SubResource("Resource_ucrc6"), SubResource("Resource_4ube3"), SubResource("Resource_q4bco"), SubResource("Resource_kckor"), SubResource("Resource_3y54u"), SubResource("Resource_60jjc"), SubResource("Resource_xguet"), SubResource("Resource_y2ces"), SubResource("Resource_wv5aa"), SubResource("Resource_47cgo"), SubResource("Resource_swo23"), SubResource("Resource_238rr"), SubResource("Resource_6va43"), null])
+script = ExtResource("1_65yih")
+words = Array[ExtResource("2_thehm")]([SubResource("Resource_e3qjh"), SubResource("Resource_ik4tn"), SubResource("Resource_y6g7b"), SubResource("Resource_150bn"), SubResource("Resource_bx3vl"), SubResource("Resource_7unlj"), SubResource("Resource_78ggv"), SubResource("Resource_33bcg"), SubResource("Resource_t8hr5"), SubResource("Resource_yp33x"), SubResource("Resource_ysp2m"), SubResource("Resource_eu32u"), SubResource("Resource_xy5ft"), SubResource("Resource_xsamh"), SubResource("Resource_m6col"), SubResource("Resource_iqyf7"), SubResource("Resource_vhnja"), SubResource("Resource_1v6p7"), SubResource("Resource_vawui"), SubResource("Resource_v08kd"), SubResource("Resource_j6ogq"), SubResource("Resource_73ce8"), SubResource("Resource_ho36c"), SubResource("Resource_207wd"), SubResource("Resource_bl02e"), SubResource("Resource_yckt3"), SubResource("Resource_6vwl0"), SubResource("Resource_0cd66"), SubResource("Resource_b5s1g"), SubResource("Resource_2h1en"), SubResource("Resource_yu1hf"), SubResource("Resource_26i0s"), SubResource("Resource_73fhd"), SubResource("Resource_hqk0l"), SubResource("Resource_6wv84"), SubResource("Resource_r7pmr"), SubResource("Resource_ahpvg"), SubResource("Resource_halkt"), SubResource("Resource_vusue"), SubResource("Resource_ghjge")])

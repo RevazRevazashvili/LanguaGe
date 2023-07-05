@@ -68,6 +68,12 @@ func _answer_selected():
 func _answer_deselected():
 	continue_button.disabled = true
 
+func _move_continue_up():
+	pass
+
+func _move_continue_down():
+	pass
+
 func _has_next_lesson():
 	return Watchman.lesson_controller.has_next_lesson()
 
@@ -133,11 +139,15 @@ func _change_current_lesson_to(lesson : Lesson):
 	if(current_lesson != null):
 		current_lesson.disconnect("selected", _answer_selected)
 		current_lesson.disconnect("deselected", _answer_deselected)
+		current_lesson.disconnect("move_continue_up", _answer_deselected)
+		current_lesson.disconnect("move_continue_down", _answer_deselected)
 		current_lesson.deinitialize()
 	
 	current_lesson = lesson
 	current_lesson.connect("selected", _answer_selected)
 	current_lesson.connect("deselected", _answer_deselected)
+	current_lesson.connect("move_continue_up", _answer_deselected)
+	current_lesson.connect("move_continue_down", _answer_deselected)
 	
 	current_lesson.initialize()
 
