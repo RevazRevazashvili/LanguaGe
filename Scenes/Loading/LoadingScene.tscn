@@ -65,7 +65,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_yb53i")
 ANIMATION_REPEAT_INTERVAL = 1.0
-metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
