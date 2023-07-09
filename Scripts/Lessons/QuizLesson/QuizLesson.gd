@@ -32,14 +32,14 @@ var button_four : Button = $VBoxContainer/BottomPart/VBoxContainer/Answer4
 var _selected_answer : int	# გვიჩვენებს რომელი პასუხია არჩეული (0 ნიშნავს რომ არაა პასუხი არჩეული)
 
 
-
-func initialize():
+func initialize(font : int = 150):
 	_selected_answer = 0
+	
+	question_label.add_theme_font_size_override("font_size", font)
 	
 	load_answers()
 	load_question()
 	self.visible = true
-
 
 func deinitialize():
 	self.visible = false

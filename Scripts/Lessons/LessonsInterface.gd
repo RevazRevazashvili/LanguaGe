@@ -18,7 +18,6 @@ var draw_lesson = $LessonsSpace/WriteLessons
 var continue_button = $Continue
 
 
-
 var current_lesson : Lesson			# მიმდინარე ჩატვირთული გაკვეთილი
 
 var current_lesson_index = 0		# მიმდინარე ტესტის ინდექსი lessons - მასივში
@@ -50,15 +49,9 @@ func _ready() -> void:
 	continue_button.disabled = true
 	current_score = 0
 
-	
 	# this is a test
 	_load_next_lesson()
 	# load lessons from somewhere
-	
-	# define current lesson
-	
-	current_lesson.connect("selected", _answer_selected)
-	
 	
 
 
@@ -135,19 +128,20 @@ func _load_draw_lesson(question : String, right_answer : String):
 	current_lesson.initialize()
 
 
+
 func _change_current_lesson_to(lesson : Lesson):
 	if(current_lesson != null):
 		current_lesson.disconnect("selected", _answer_selected)
 		current_lesson.disconnect("deselected", _answer_deselected)
-		current_lesson.disconnect("move_continue_up", _answer_deselected)
-		current_lesson.disconnect("move_continue_down", _answer_deselected)
+		# current_lesson.disconnect("move_continue_up", _answer_deselected)
+		# current_lesson.disconnect("move_continue_down", _answer_deselected)
 		current_lesson.deinitialize()
 	
 	current_lesson = lesson
 	current_lesson.connect("selected", _answer_selected)
 	current_lesson.connect("deselected", _answer_deselected)
-	current_lesson.connect("move_continue_up", _answer_deselected)
-	current_lesson.connect("move_continue_down", _answer_deselected)
+	# current_lesson.connect("move_continue_up", _answer_deselected)
+	# current_lesson.connect("move_continue_down", _answer_deselected)
 	
 	current_lesson.initialize()
 

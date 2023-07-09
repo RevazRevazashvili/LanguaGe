@@ -1,30 +1,40 @@
 extends Control
 
 
-# we load icons and lessons identifiers from database
-# all lesson click will transfer user to lessonsinterface
-# but difference would be settings which will be set,
-# for example: level of lessons tags of lessons and stuff like that
-
 @onready
 var swipe_menu = $SwipeMenu
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+@onready
+var progress : TextureProgressBar = $ProgressBar
 
 
 func _on_button_pressed() -> void:
-	
 	# according to this launch
 	Watchman.load_lesson_interface_by_index(swipe_menu.card_current_index)
+
+
+func _on_swipe_menu_card_changed(index):
+	match Watchman.lessons_enums[index]:
+		Watchman.LESSON_TYPE.lett: _load_letters_lessons_progress()
+		Watchman.LESSON_TYPE.s_wrd: _load_simple_words_lessons_progress()
+		Watchman.LESSON_TYPE.mixd: _load_practice_lessons_progress()
+
+
+func _load_letters_lessons_progress():
+	var progress_value = Letter_saver.load_data().get_practiced()
 	
+	progress.value = 100*progress_value
+
+func _load_simple_words_lessons_progress():
+	var progress_value = Word_saver.load_data().get_practiced()
 	
+	progress.value = 100*progress_value
+
+func _load_practice_lessons_progress():
+	var letter_progress = Letter_saver.load_data().get_practiced()
+	var word_progress = Word_saver.load_data().get_practiced()
+	
+	progress.value = 100*(letter_progress + word_progress)/2
 
 
 

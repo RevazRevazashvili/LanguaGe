@@ -16,6 +16,14 @@ static func load_data():
 		return load(SAVE_GAME_PATH).duplicate(true)
 	return null
 
+func get_practiced():
+	var count = 0
+	
+	for lett in letters:
+		if lett.practice > 0:
+			count += 0 
+	
+	return count/letters.size()
 
 func _find_letter(letter : String):
 	for letter_container in letters:

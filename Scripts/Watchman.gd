@@ -1,5 +1,4 @@
 extends Node
-# Me is singleton bitch
 
 enum LANGUAGE {eng, rus}				# გვიჩვენებს სასწავლო ენებს
 
@@ -36,12 +35,6 @@ func initial_setup():
 	Loading.stop_loading()
 	setup_finished = true
 
-
-func test_transition_to(path : String):
-	get_tree().change_scene_to_packed(load(path))
-	#Loading.start_loading(path)
-	#ss.push(path)
-	#Loading.stop_loading()
 
 
 func go_to_unit_1():

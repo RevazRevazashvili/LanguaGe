@@ -35,8 +35,10 @@ var _selected_answer : int	# გვიჩვენებს რომელი �
 
 
 
-func initialize():
+func initialize(font : int = 130):
 	_selected_answer = 0
+	
+	question_button.add_theme_font_size_override("font_size", font)
 	
 	load_answers()
 	load_question()
