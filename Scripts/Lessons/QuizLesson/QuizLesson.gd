@@ -93,7 +93,7 @@ func load_question():
 
 func load_audio_on(button, audio_label):
 	var audio = button.get_child(0) as AudioStreamPlayer2D
-	audio.stream = load(DataManager.get_letter_sound_path(Watchman.data_dict[audio_label]))
+	audio.stream = load(DataManager.get_sound_path(Watchman.data_dict[audio_label]))
 
 func check_if_answered():
 	return _selected_answer != 0
