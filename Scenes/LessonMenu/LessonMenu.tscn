@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cayjbcb7stwhd"]
+[gd_scene load_steps=8 format=3 uid="uid://cayjbcb7stwhd"]
 
 [ext_resource type="Texture2D" uid="uid://cwryosqv6iamk" path="res://Assets/Common/Background_color.png" id="1_f3fk3"]
 [ext_resource type="PackedScene" uid="uid://da28g64xeig3o" path="res://Scenes/LessonMenu/SwipeMenu.tscn" id="1_gr7jh"]
 [ext_resource type="Script" path="res://Scripts/LessonMenu/LessonMenu.gd" id="1_sk3tf"]
 [ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="2_swbq0"]
 [ext_resource type="PackedScene" uid="uid://boqgvdeaxj17g" path="res://Scenes/TopBar/TopBar.tscn" id="4_bdcma"]
+[ext_resource type="Texture2D" uid="uid://b0jhd6o23qesy" path="res://Assets/LessonMenu/ProgressBarBorder.png" id="6_kfed2"]
+[ext_resource type="Texture2D" uid="uid://jodhxippkyre" path="res://Assets/LessonMenu/ProgressBarFill.png" id="7_30d73"]
 
 [node name="LessonMenu" type="Control"]
 layout_mode = 3
@@ -64,5 +66,24 @@ offset_right = 0.0
 offset_bottom = 0.0
 metadata/_edit_use_anchors_ = true
 
+[node name="ProgressBar" type="TextureProgressBar" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -243.0
+offset_top = -620.0
+offset_right = 243.0
+offset_bottom = -534.0
+grow_horizontal = 2
+grow_vertical = 0
+value = 67.0
+texture_over = ExtResource("6_kfed2")
+texture_progress = ExtResource("7_30d73")
+
 [connection signal="resized" from="." to="SwipeMenu" method="_on_lesson_menu_resized"]
 [connection signal="pressed" from="Background/Button" to="." method="_on_button_pressed"]
+[connection signal="card_changed" from="SwipeMenu" to="." method="_on_swipe_menu_card_changed"]

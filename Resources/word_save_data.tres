@@ -323,7 +323,6 @@ rus = ""
 priority = 0
 practice = 0
 
-
 [resource]
 script = ExtResource("1_65yih")
 words = Array[ExtResource("2_thehm")]([SubResource("Resource_e3qjh"), SubResource("Resource_ik4tn"), SubResource("Resource_y6g7b"), SubResource("Resource_150bn"), SubResource("Resource_bx3vl"), SubResource("Resource_7unlj"), SubResource("Resource_78ggv"), SubResource("Resource_33bcg"), SubResource("Resource_t8hr5"), SubResource("Resource_yp33x"), SubResource("Resource_ysp2m"), SubResource("Resource_eu32u"), SubResource("Resource_xy5ft"), SubResource("Resource_xsamh"), SubResource("Resource_m6col"), SubResource("Resource_iqyf7"), SubResource("Resource_vhnja"), SubResource("Resource_1v6p7"), SubResource("Resource_vawui"), SubResource("Resource_v08kd"), SubResource("Resource_j6ogq"), SubResource("Resource_73ce8"), SubResource("Resource_ho36c"), SubResource("Resource_207wd"), SubResource("Resource_bl02e"), SubResource("Resource_yckt3"), SubResource("Resource_6vwl0"), SubResource("Resource_0cd66"), SubResource("Resource_b5s1g"), SubResource("Resource_2h1en"), SubResource("Resource_yu1hf"), SubResource("Resource_26i0s"), SubResource("Resource_73fhd"), SubResource("Resource_hqk0l"), SubResource("Resource_6wv84"), SubResource("Resource_r7pmr"), SubResource("Resource_ahpvg"), SubResource("Resource_halkt"), SubResource("Resource_vusue"), SubResource("Resource_ghjge")])

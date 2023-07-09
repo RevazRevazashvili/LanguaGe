@@ -1,5 +1,9 @@
 extends ScrollContainer
 
+
+signal card_changed(index:int)
+
+
 @export_range(0.5, 1, 0.1)
 var card_scale = 1
 
@@ -22,6 +26,7 @@ var card_space: int = $CenterContainer/MarginContainer/HBoxContainer.get("theme_
 @onready
 var card_nodes: Array = $CenterContainer/MarginContainer/HBoxContainer.get_children()
 
+
 var ready_complete = false
 
 func _ready() -> void:
@@ -36,6 +41,7 @@ func _ready() -> void:
 	
 	scroll_horizontal = card_x_position[card_current_index]
 	scroll()
+	emit_signal("card_changed", 0)
 	ready_complete = true
 
 
@@ -54,8 +60,8 @@ func _process(delta: float) -> void:
 		card_nodes[_index].modulate.a = _card_opacity
 	
 		if _swipe_current_length < _swipe_length:
+			if(card_current_index != _index): emit_signal("card_changed", _index)
 			card_current_index = _index
-	
 
 
 func range_lerp(value, min1, min2, max1, max2):
@@ -78,7 +84,10 @@ func scroll() -> void:
 			"scale",
 			Vector2(_card_scale, _card_scale),
 			scroll_duration
-		).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+		).set_trans(
+			Tween.TRANS_BACK
+			).set_ease(
+				Tween.EASE_OUT)
 
 
 func _on_gui_input(event: InputEvent) -> void:
@@ -102,7 +111,6 @@ func _on_lesson_menu_resized() -> void:
 		var _card_pos_x: float = (margin_r + _card.position.x) - ((size.x - _card.size.x)/2)
 		_card.pivot_offset = (_card.size / 2)
 		card_x_position.append(_card_pos_x)
-		print(_card_pos_x)
 	
 	scroll_horizontal = card_x_position[card_current_index]
 	scroll()

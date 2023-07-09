@@ -15,6 +15,16 @@ static func load_data():
 	return null
 
 
+func get_practiced():
+	var count = 0
+	
+	for wrd in words:
+		if wrd.practice > 0:
+			count += 0 
+	
+	return count/words.size()
+
+
 func _find_word(word : String):
 	for w in words:
 		if w.word == word:
