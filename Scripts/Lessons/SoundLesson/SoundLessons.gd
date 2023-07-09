@@ -97,12 +97,12 @@ func load_question():
 		question_button.icon = null
 		
 		# ხმის ჩატვირთვა
-		question_audio.stream = load(DataManager.get_letter_sound_path(question))
+		question_audio.stream = load(DataManager.get_sound_path(question))
 
 
 func load_audio_on(button, audio_label):
 	var audio = button.get_child(0) as AudioStreamPlayer2D
-	audio.stream = load(DataManager.get_letter_sound_path(Watchman.data_dict[audio_label]))
+	audio.stream = load(DataManager.get_sound_path(Watchman.data_dict[audio_label]))
 
 
 func check_if_answered():
