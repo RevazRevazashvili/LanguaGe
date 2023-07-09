@@ -6,8 +6,6 @@ const SAVE_GAME_PATH := DataManager.RESOURCE_FOLDER_PATH + "/letter_save_data.tr
 @export
 var letters: Array[Letter]
 
-#@export
-#var words: Array[Word]
 
 func save_data():
 	ResourceSaver.save(self, SAVE_GAME_PATH)

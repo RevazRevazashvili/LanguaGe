@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://brv1b5o2utgwc"]
 
-[ext_resource type="Texture2D" uid="uid://cihd1oslqa81r" path="res://Assets/Common/sun.png" id="2_3yqo1"]
+[ext_resource type="Texture2D" uid="uid://d1mgxjoxt8ldt" path="res://Assets/Common/mandarin.png" id="1_6xmts"]
 [ext_resource type="Theme" uid="uid://d1id77vb1bjar" path="res://Assets/Common/Themes/CommonTheme.tres" id="3_6xd8c"]
 [ext_resource type="Texture2D" uid="uid://cs8jigtcf4unp" path="res://Assets/Common/british_flag.png" id="3_btrgp"]
 [ext_resource type="Texture2D" uid="uid://x5vi36foyt4l" path="res://Assets/Common/Logo.png" id="4_schhi"]
@@ -12,6 +12,7 @@ anchor_bottom = 0.1
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
+focus_mode = 1
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 1
@@ -43,7 +44,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Sun" type="Sprite2D" parent="Control/ColorRect/Control"]
 position = Vector2(92, 94)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_3yqo1")
+texture = ExtResource("1_6xmts")
 
 [node name="Label" type="Label" parent="Control/ColorRect/Control"]
 layout_mode = 1

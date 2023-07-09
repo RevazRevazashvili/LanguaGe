@@ -24,12 +24,9 @@ var current_language : LANGUAGE = LANGUAGE.eng	# გვიჩვენებს 
 
 
 func _ready() -> void:
-	#Loading.start_loading()
+	#Word_saver.new().save_data()
 	Loading.connect("loading_cycle", initial_setup)
-	
-	#Data_saver.new().save_data()
-	
-	#var aqlemi = Data_saver.load_data()
+
 
 # საწყისი ჩატვირთვის დორს განხორციელებული ფუნქცია
 func initial_setup():
@@ -91,8 +88,15 @@ func _load_letters_lessons():
 
 
 func _load_simple_words_lessons():
-	print("simple words!!")
-	pass
+	# გაუშვათ ლოადინგი
+	Loading.start_loading()
+	
+	lesson_controller = Words_lesson_util.new()
+	
+	lesson_controller.initialize()
+	
+	Loading.stop_loading_and_transition("res://Scenes/Lessons/LessonsInterface.tscn")
+
 
 func _load_practice_lessons():
 	pass

@@ -29,3 +29,8 @@ func contains_letter(letter : String):
 func contains(letter : Letter):
 	return contains_letter(letter.letter)
 
+# აბრუნებს არჩეული უცხო ენოვან თარგმანს
+func get_foreign():
+	match Watchman.current_language:
+		Watchman.LANGUAGE.eng: return eng
+		Watchman.LANGUAGE.rus: return rus
