@@ -49,10 +49,7 @@ func _ready() -> void:
 	continue_button.disabled = true
 	current_score = 0
 
-	# this is a test
 	_load_next_lesson()
-	# load lessons from somewhere
-	
 
 
 func _answer_selected():
@@ -89,7 +86,7 @@ func _load_last_page():
 	continue_button.disabled = false
 	last_page.visible = true
 	
-	#Watchman.lesson_controller.save_data()
+	Watchman.lesson_controller.save_data()
 
 
 
