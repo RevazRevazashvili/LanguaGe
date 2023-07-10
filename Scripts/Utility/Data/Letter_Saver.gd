@@ -17,11 +17,11 @@ static func load_data():
 	return null
 
 func get_practiced():
-	var count = 0
+	var count = 0.0
 	
 	for lett in letters:
 		if lett.practice > 0:
-			count += 0 
+			count += 1 
 	
 	return count/letters.size()
 

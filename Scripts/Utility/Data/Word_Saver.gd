@@ -16,11 +16,11 @@ static func load_data():
 
 
 func get_practiced():
-	var count = 0
+	var count = 0.0
 	
 	for wrd in words:
 		if wrd.practice > 0:
-			count += 0 
+			count += 1
 	
 	return count/words.size()
 
