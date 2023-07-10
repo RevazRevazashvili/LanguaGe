@@ -23,17 +23,22 @@ func _on_swipe_menu_card_changed(index):
 func _load_letters_lessons_progress():
 	var progress_value = Letter_saver.load_data().get_practiced()
 	
+	progress.visible = true
 	progress.value = 100*progress_value
 
 func _load_simple_words_lessons_progress():
 	var progress_value = Word_saver.load_data().get_practiced()
 	
+	progress.visible = true
 	progress.value = 100*progress_value
 
 func _load_practice_lessons_progress():
+	progress.visible = false
+	
+	return	
+	# depricated
 	var letter_progress = Letter_saver.load_data().get_practiced()
 	var word_progress = Word_saver.load_data().get_practiced()
-	
 	progress.value = 100*(letter_progress + word_progress)/2
 
 
