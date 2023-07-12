@@ -15,7 +15,7 @@ run/main_scene="res://Scenes/Loading/LoadingScene.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
 boot_splash/image="res://Assets/Loading/loading_screen.png"
-config/icon="res://Assets/logo.png"
+config/icon="res://Assets/icon.png"
 
 [autoload]
 
@@ -29,9 +29,9 @@ DataManager="*res://Scripts/Utility/Data/Data_Manager.gd"
 window/size/viewport_width=1080
 window/size/viewport_height=1920
 window/size/initial_position_type=0
+window/handheld/orientation=1
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
-window/handheld/orientation=1
 
 [editor]
 
